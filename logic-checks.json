@@ -1,0 +1,143 @@
+{
+  "kind": "逻辑和源文件检查",
+  "total": 34,
+  "passed": 34,
+  "checks": [
+    {
+      "name": "system.js 语法",
+      "pass": true
+    },
+    {
+      "name": "select.js 语法",
+      "pass": true
+    },
+    {
+      "name": "docs.js 语法",
+      "pass": true
+    },
+    {
+      "name": "templates.js 语法",
+      "pass": true
+    },
+    {
+      "name": "qa-summary.js 语法",
+      "pass": true
+    },
+    {
+      "name": "跨年：2026-12-31 的下一天",
+      "pass": true
+    },
+    {
+      "name": "月初前移：2026-03-01",
+      "pass": true
+    },
+    {
+      "name": "2000 年是闰年",
+      "pass": true
+    },
+    {
+      "name": "1900 年不是闰年",
+      "pass": true
+    },
+    {
+      "name": "日期偏移包含月边界",
+      "pass": true
+    },
+    {
+      "name": "空文件选择被拒绝",
+      "pass": true
+    },
+    {
+      "name": "不支持的 SVG 格式被拒绝",
+      "pass": true
+    },
+    {
+      "name": "大于 5MB 文件被拒绝",
+      "pass": true
+    },
+    {
+      "name": "恰好 5MB PDF 可选择",
+      "pass": true
+    },
+    {
+      "name": "三个合法文件可选择",
+      "pass": true
+    },
+    {
+      "name": "第四个文件被拒绝",
+      "pass": true
+    },
+    {
+      "name": "空表单定位四项错误",
+      "pass": true
+    },
+    {
+      "name": "空白学习目标被拒绝",
+      "pass": true
+    },
+    {
+      "name": "不完整邮箱被拒绝",
+      "pass": true
+    },
+    {
+      "name": "合法表单通过",
+      "pass": true
+    },
+    {
+      "name": "用户输入转义而不作为 HTML 注入",
+      "pass": true
+    },
+    {
+      "name": "本地保存不可用时返回可处理状态",
+      "pass": true
+    },
+    {
+      "name": "用户指定的 17 项原始角色逐值一致",
+      "pass": true
+    },
+    {
+      "name": "主要动作使用澄海蓝，未偷换为深阶",
+      "pass": true
+    },
+    {
+      "name": "JSON 与 CSS 变量源同步",
+      "pass": true
+    },
+    {
+      "name": "tokens.css 无额外 HEX 色值",
+      "pass": true
+    },
+    {
+      "name": "system.css 无额外 HEX 色值",
+      "pass": true
+    },
+    {
+      "name": "docs.js 无额外 HEX 色值",
+      "pass": true
+    },
+    {
+      "name": "templates.js 无额外 HEX 色值",
+      "pass": true
+    },
+    {
+      "name": "select.js 无额外 HEX 色值",
+      "pass": true
+    },
+    {
+      "name": "assets/favicon.svg 无额外 HEX 色值",
+      "pass": true
+    },
+    {
+      "name": "CSS 所用变量全部有定义",
+      "pass": true
+    },
+    {
+      "name": "35 项组件规格与 19+16 缺口范围",
+      "pass": true
+    },
+    {
+      "name": "三个实际图片存在",
+      "pass": true
+    }
+  ]
+}

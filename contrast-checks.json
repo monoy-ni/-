@@ -1,0 +1,61 @@
+{
+  "policy": "原色严格保留，组合的可读性限制如实记录，不以改色代替用户选择",
+  "pairs": [
+    {
+      "name": "正文",
+      "fg": "#2A3A4A",
+      "bg": "#FDFCFA",
+      "ratio": 11.362,
+      "normalTextAA": true
+    },
+    {
+      "name": "辅助文字",
+      "fg": "#7A8A9A",
+      "bg": "#FFFFFF",
+      "ratio": 3.542,
+      "normalTextAA": false
+    },
+    {
+      "name": "主色按钮白字",
+      "fg": "#FFFFFF",
+      "bg": "#20A0E0",
+      "ratio": 2.93,
+      "normalTextAA": false
+    },
+    {
+      "name": "深阶按钮白字",
+      "fg": "#FFFFFF",
+      "bg": "#0060A0",
+      "ratio": 6.602,
+      "normalTextAA": true
+    },
+    {
+      "name": "成功色文字白底",
+      "fg": "#4A8B3B",
+      "bg": "#FFFFFF",
+      "ratio": 4.161,
+      "normalTextAA": false
+    },
+    {
+      "name": "警示文字与警示面",
+      "fg": "#7E5E07",
+      "bg": "#F5C542",
+      "ratio": 3.709,
+      "normalTextAA": false
+    },
+    {
+      "name": "错误文字与错误面",
+      "fg": "#C21F26",
+      "bg": "#F0D9DC",
+      "ratio": 4.453,
+      "normalTextAA": false
+    },
+    {
+      "name": "信息文字与极浅蓝面",
+      "fg": "#1879AA",
+      "bg": "#EAF4FB",
+      "ratio": 4.325,
+      "normalTextAA": false
+    }
+  ]
+}

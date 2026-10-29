@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>页面模板 · 青春感课程设计系统</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="system.css">
+  <script src="system.js" defer></script>
+  <script src="select.js" defer></script>
+  <script src="templates.js" defer></script>
+</head>
+<body class="template-body">
+  <a class="skip" href="#template-main">跳到主要内容</a>
+  <div id="template-app"><noscript>请启用 JavaScript 查看页面模板。</noscript></div>
+  <dialog id="course-directory" class="drawer" aria-labelledby="course-directory-title"><div class="dialog-inner"><div class="row between"><h2 id="course-directory-title">课程目录</h2><button class="btn quiet icon-btn" type="button" data-close-dialog aria-label="关闭课程目录">关闭</button></div><div id="mobile-course-directory" class="mt"></div></div></dialog>
+  <dialog id="template-search" class="search-dialog" aria-labelledby="template-search-title"><div class="dialog-inner"><h2 id="template-search-title">查找一个主题</h2><div class="control mt"><label class="sr-only" for="template-search-input">主题关键词</label><input id="template-search-input" type="search" placeholder="试试「观察」或「颜色」" autofocus><button type="button" class="btn quiet sm" data-close-dialog>关闭</button></div><ul class="list" id="template-search-results" aria-live="polite"></ul></div></dialog>
+  <dialog id="template-contact" aria-labelledby="template-contact-title"><div class="dialog-inner"><h2 id="template-contact-title">留下一个想法</h2><label class="field mt" for="template-feedback">你想继续讨论什么？<textarea id="template-feedback" maxlength="300" placeholder="写下一句话…"></textarea></label><p class="hint mt">作为模板演示，内容只保存在当前浏览器。</p><div class="dialog-actions"><button class="btn outline" type="button" data-close-dialog>取消</button><button class="btn primary" type="button" id="template-save-feedback">保存到本机</button></div></div></dialog>
+  <div class="toast-region" aria-label="操作通知"></div>
+</body>
+</html>

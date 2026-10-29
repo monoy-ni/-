@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="青春感课程设计系统：设计基础、35个组件、设计模式和6套页面模板。">
+  <title>青春感 · 课程设计系统</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="system.css">
+  <script src="qa-summary.js" defer></script>
+  <script src="system.js" defer></script>
+  <script src="select.js" defer></script>
+  <script src="docs.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main-content">跳到主要内容</a>
+  <header class="doc-header">
+    <div class="row tight">
+      <button class="btn quiet icon-btn mobile-menu" type="button" aria-label="打开文档导航" data-open-dialog="nav-drawer"><span data-icon="menu"></span></button>
+      <a class="brand" href="#overview"><span class="mark" data-icon="book"></span><span>青春感设计系统<small>FOR LEARNING & CREATING</small></span></a>
+    </div>
+    <div class="row tight">
+      <button class="header-search" type="button" data-open-dialog="quick-search" aria-label="搜索文档与组件"><span data-icon="search"></span><span>查找组件、变量和模板</span><kbd>⌘ K</kbd></button>
+      <span class="chip neutral header-version"><i class="status-dot"></i>v1.0.0</span>
+    </div>
+  </header>
+  <div class="doc-shell">
+    <nav class="doc-nav" id="desktop-nav" aria-label="设计系统文档"></nav>
+    <main class="doc-main" id="main-content" tabindex="-1"><noscript>此设计系统需要启用 JavaScript 来展示交互组件与页面模板。基础变量仍可在 tokens.json 与 tokens.css 中阅读。</noscript></main>
+  </div>
+  <dialog id="nav-drawer" class="drawer" aria-labelledby="nav-drawer-title">
+    <div class="dialog-inner"><div class="row between"><h2 id="nav-drawer-title">文档导航</h2><button type="button" class="btn quiet icon-btn" data-close-dialog aria-label="关闭导航"><span data-icon="close"></span></button></div><nav class="drawer-nav" aria-label="移动文档导航"></nav></div>
+  </dialog>
+  <dialog id="quick-search" class="search-dialog" aria-labelledby="quick-search-title">
+    <h2 id="quick-search-title" class="sr-only">搜索文档与组件</h2>
+    <label class="sr-only" for="quick-search-input">输入组件或文档名称</label>
+    <div class="control"><span data-icon="search"></span><input id="quick-search-input" type="search" placeholder="试试：按钮、日期、页面模板…" autofocus><button class="btn quiet sm" type="button" data-close-dialog>关闭</button></div>
+    <p class="caption" role="status" id="quick-count" style="padding:0 24px 12px"></p>
+    <ul class="search-results" id="quick-search-results"></ul>
+  </dialog>
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title" aria-describedby="confirm-description">
+    <div class="dialog-inner"><span class="chip warning">操作演示</span><h2 id="confirm-title" class="mt">移除这份演示草稿？</h2><p id="confirm-description" class="muted small">你可以选择取消。此处只演示确认流程，不会删除实际资料。</p><div class="dialog-actions"><button class="btn outline" type="button" data-close-dialog autofocus>保留草稿</button><button id="confirm-demo" class="btn danger" type="button">确认演示</button></div></div>
+  </dialog>
+  <dialog id="info-dialog" aria-labelledby="info-title">
+    <div class="dialog-inner"><h2 id="info-title">先观察，再解释。</h2><p class="small muted">记录画面里能确认的对象、物件和动作，再把情绪概括单独写出来。</p><div class="dialog-actions"><button class="btn primary" type="button" data-close-dialog autofocus>我知道了</button></div></div>
+  </dialog>
+  <dialog id="directory-drawer" class="drawer" aria-labelledby="directory-title">
+    <div class="dialog-inner"><div class="row between"><h2 id="directory-title">课程目录</h2><button class="btn quiet icon-btn" type="button" data-close-dialog aria-label="关闭课程目录"><span data-icon="close"></span></button></div><div id="directory-drawer-body" class="mt"></div></div>
+  </dialog>
+  <div class="toast-region" aria-label="操作通知"></div>
+</body>
+</html>
