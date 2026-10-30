@@ -59,7 +59,7 @@ test('图片、卡片、按钮圆角及两种蓝色阴影符合原值',()=>{
   assert.equal(tokens.shadow.soft,'0 4px 16px rgba(32,160,224,.10)');
   assert.equal(tokens.shadow.lift,'0 8px 24px rgba(32,160,224,.14)');
 });
-for(const name of ['index.html','templates.html','课程内容页.html','开学第一课.html'])test(name+' 使用同一份共享样式且无变量副本',()=>{
+for(const name of ['index.html','templates.html','课程内容页.html','开学第一课.html','bicycle-prd.html'])test(name+' 使用同一份共享样式且无变量副本',()=>{
   const html=read(name);assert.match(html,/href="tokens\.css\?v=[^"]+"/);assert.match(html,/href="system\.css\?v=[^"]+"/);
   assert.ok(!html.includes('--font-size-caption:'));assert.ok(!html.includes('--color-primary:'));
 });
@@ -70,7 +70,7 @@ test('规范样张读取变量而不再保留旧字号表',()=>{
 test('JSON 与 CSS 变量源同步',()=>{const css=read('tokens.css');for(const group of ['color','semantic','font','font-size','space','radius','shadow','motion','layer','component'])for(const [key,value]of Object.entries(tokens[group]))assert.ok(css.includes('--'+group+'-'+key+': '+value+';'),group+'.'+key)});
 const colors=new Set(Object.values(expected));
 for(const name of ['tokens.css','system.css','docs.js','templates.js','select.js','assets/favicon.svg'])test(name+' 无额外 HEX 色值',()=>{const found=read(name).match(/#[\da-fA-F]{6}\b/g)||[];assert.equal(found.filter(x=>!colors.has(x.toUpperCase())).length,0)});
-test('所有页面样式所用变量全部有定义',()=>{const css=['tokens.css','system.css','course-layout.css','opening-layout.css','wardrobe-lesson.css'].map(read).join('\n'),defined=new Set([...css.matchAll(/(--[\w-]+)\s*:/g)].map(x=>x[1]));const refs=[...css.matchAll(/var\((--[\w-]+)/g)].map(x=>x[1]);assert.deepEqual([...new Set(refs.filter(x=>!defined.has(x)))],[])});
+test('所有页面样式所用变量全部有定义',()=>{const css=['tokens.css','system.css','course-layout.css','opening-layout.css','wardrobe-lesson.css','product-lesson.css'].map(read).join('\n'),defined=new Set([...css.matchAll(/(--[\w-]+)\s*:/g)].map(x=>x[1]));const refs=[...css.matchAll(/var\((--[\w-]+)/g)].map(x=>x[1]);assert.deepEqual([...new Set(refs.filter(x=>!defined.has(x)))],[])});
 test('35 项组件规格与 19+16 缺口范围',()=>{const calls=[...read('docs.js').matchAll(/^  add\('([^']+)'.*?'(基础|反馈|导航|展示|表单|内容)',(true|false),/gm)];assert.equal(calls.length,35);assert.equal(calls.filter(x=>x[3]==='true').length,16)});
 test('三个实际图片存在',()=>['campus.jpg','study.jpg','craft.png'].forEach(n=>assert.ok(fs.statSync(path.join(root,'assets',n)).size>0)));
 const output={kind:'逻辑和源文件检查',total:results.length,passed:results.filter(x=>x.pass).length,checks:results};

@@ -1,7 +1,7 @@
 {
   "kind": "逻辑和源文件检查",
-  "total": 44,
-  "passed": 44,
+  "total": 45,
+  "passed": 45,
   "checks": [
     {
       "name": "system.js 语法",
@@ -133,6 +133,10 @@
     },
     {
       "name": "开学第一课.html 使用同一份共享样式且无变量副本",
+      "pass": true
+    },
+    {
+      "name": "bicycle-prd.html 使用同一份共享样式且无变量副本",
       "pass": true
     },
     {

@@ -1,0 +1,1101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>自行车 PRD · 城市通勤自行车产品需求文档</title>
+<script>if(new URLSearchParams(location.search).get('embed')==='1')document.documentElement.classList.add('prd-embedded');</script>
+<link rel="stylesheet" href="tokens.css?v=reference-2">
+<link rel="stylesheet" href="system.css?v=reference-2">
+<link rel="stylesheet" href="product-lesson.css?v=product-reader-1">
+</head>
+<body class="prd-page">
+<a class="skip" href="#prd-content">跳到文档正文</a>
+<header class="prd-header"><a href="课程内容页.html#product-topic-3">← 返回课程</a><span>项目拆解 · 教学示例</span></header>
+<nav class="prd-reader-nav" aria-label="文档章节">
+<label for="prd-jump">文档目录</label><select id="prd-jump"><option value="document-start">从头阅读</option>
+<option value="part-1">第一部分：项目整体分析</option>
+<option value="section-2">　1.1 项目背景</option>
+<option value="section-3">　1.2 项目目标</option>
+<option value="section-4">　1.3 目标用户</option>
+<option value="section-5">　1.4 项目边界</option>
+<option value="section-6">　1.5 优先级规则</option>
+<option value="part-2">第二部分：项目功能拆解</option>
+<option value="section-8">　2.1 功能结构</option>
+<option value="part-3">第三部分：详细功能需求</option>
+<option value="function-f001">　F001.FR001 自行车骑行驱动功能</option>
+<option value="function-f002">　F002.FR001 自行车方向控制功能</option>
+<option value="function-f003">　F003.FR001 自行车减速与制动功能</option>
+<option value="function-f004">　F004.FR001 自行车骑行稳定性功能</option>
+<option value="function-f005">　F005.FR001 自行车人体适配功能</option>
+<option value="function-f006">　F006.FR001 自行车骑行舒适性功能</option>
+<option value="function-f007">　F007.FR001 自行车坡度与速度适应功能</option>
+<option value="function-f008">　F008.FR001 自行车夜间可见性功能</option>
+<option value="function-f009">　F009.FR001 自行车雨天防溅功能</option>
+<option value="function-f010">　F010.FR001 自行车临时停放功能</option>
+<option value="function-f011">　F011.FR001 自行车随身物品携带功能</option>
+<option value="function-f012">　F012.FR001 自行车防盗配合功能</option>
+<option value="function-f013">　F013.FR001 自行车日常检查与维护功能</option>
+<option value="function-f014">　F014.FR001 自行车产品交付与使用指导功能</option>
+</select></nav>
+<main class="prd-main" id="prd-content" tabindex="-1"><article class="rich prd-document">
+<p class="prd-source-name"><strong>自行车prd</strong></p>
+<h1 class="prd-title" id="document-start" tabindex="-1"><strong>城市通勤自行车产品需求文档（PRD）</strong></h1>
+<p class="prd-metadata"><strong>项目编号：</strong> BIKE-001<br><strong>文档版本：</strong> V1.0<br><strong>项目名称：</strong> 城市通勤自行车<br><strong>文档类型：</strong> 产品需求文档 / 项目拆解教学示例<br><strong>项目目标：</strong> 完成一款满足成年人日常短途通勤需求的普通自行车</p>
+<aside class="prd-note"><p>文中价格、尺寸、重量、测试阈值均为教学示例中的初步项目假设，不代表行业强制标准。实际产品交付前，还需依据销售地区适用的安全标准进行检测和确认。</p></aside>
+<h2 id="part-1" tabindex="-1"><strong>第一部分：项目整体分析</strong></h2>
+<h3 id="section-2" tabindex="-1"><strong>1.1 项目背景</strong></h3>
+<p>当前存在大量短途出行场景，例如从家到学校、从宿舍到教学楼、从住宅区到附近商店。</p>
+<p>这些场景通常具有以下特点：</p>
+<ul>
+<li>出行距离较短，步行可能需要较长时间。</li>
+<li>使用汽车或其他机动车存在停车不方便的问题。</li>
+<li>用户希望出行方式简单、经济、易于掌握。</li>
+<li>用户对安全性、舒适性以及日常维护便利性有基本要求。</li>
+</ul>
+<p>因此，我们计划设计并交付一款适合日常城市道路的普通自行车。</p>
+<h3 id="section-3" tabindex="-1"><strong>1.2 项目目标</strong></h3>
+<p>最终产出一辆能够满足以下需求的自行车：</p>
+<ol>
+<li>用户可以通过踩踏使自行车前进。</li>
+<li>用户能够控制前进方向。</li>
+<li>用户可以随时减速并安全停止。</li>
+<li>自行车在正常使用条件下保持稳定。</li>
+<li>不同体型的目标用户能够调整骑行姿势。</li>
+<li>能够满足典型城市短途通勤。</li>
+<li>具备基本的夜间可见性和日常使用便利性。</li>
+<li>能够检查、维护并长期重复使用。</li>
+</ol>
+<h3 id="section-4" tabindex="-1"><strong>1.3 目标用户</strong></h3>
+<div class="prd-table-wrap" tabindex="0" role="region" aria-label="目标用户与项目假设"><table class="prd-table"><caption>目标用户与项目假设</caption><thead><tr><th scope="col">维度</th><th scope="col">项目假设</th></tr></thead><tbody><tr><td>用户类型</td><td>学生、城市上班族、短途出行者</td></tr><tr><td>年龄范围</td><td>成年人</td></tr><tr><td>主要身高范围</td><td>165–185 cm</td></tr><tr><td>主要使用者体重范围</td><td>50–100 kg</td></tr><tr><td>单次骑行距离</td><td>3–10 km</td></tr><tr><td>主要路况</td><td>铺装道路、自行车道、校园道路</td></tr><tr><td>使用频率</td><td>每周 3–7 天</td></tr><tr><td>核心诉求</td><td>安全、易骑、舒适、经济</td></tr></tbody></table></div>
+<p>上述体型范围用于确定首期产品适配目标，不等同于产品最终安全承载范围。</p>
+<h3 id="section-5" tabindex="-1"><strong>1.4 项目边界</strong></h3>
+<p><strong>本期项目包含：</strong></p>
+<ul>
+<li>普通人力自行车</li>
+<li>前进、转向、制动等核心骑行能力</li>
+<li>基本骑行舒适性与适配性</li>
+<li>日常停车、载物、防盗配合</li>
+<li>基本照明与可见性</li>
+<li>使用说明和维护指导</li>
+</ul>
+<p><strong>本期项目不包含：</strong></p>
+<ul>
+<li>电动助力</li>
+<li>智能导航</li>
+<li>GPS 定位</li>
+<li>手机 App</li>
+<li>专业竞速能力</li>
+<li>高难度山地越野能力</li>
+<li>自动驾驶或自动平衡</li>
+</ul>
+<h3 id="section-6" tabindex="-1"><strong>1.5 优先级规则</strong></h3>
+<div class="prd-table-wrap" tabindex="0" role="region" aria-label="优先级规则"><table class="prd-table"><caption>优先级规则</caption><thead><tr><th scope="col">级别</th><th scope="col">定义</th><th scope="col">决策原则</th></tr></thead><tbody><tr><td>P0</td><td>必须完成</td><td>缺少该能力，产品不应按既定目标交付</td></tr><tr><td>P1</td><td>重要需求</td><td>明显影响完整使用体验，原则上纳入正式版本</td></tr><tr><td>P2</td><td>增强需求</td><td>可在后续版本增加，不影响首期核心目标</td></tr></tbody></table></div>
+<p>安全与适用法规要求不能简单通过降低优先级而取消。</p>
+<h2 id="part-2" tabindex="-1"><strong>第二部分：项目功能拆解</strong></h2>
+<h3 id="section-8" tabindex="-1"><strong>2.1 功能结构</strong></h3>
+<p><strong>项目：做一辆城市通勤自行车</strong></p>
+<div class="prd-table-wrap" tabindex="0" role="region" aria-label="自行车功能结构"><table class="prd-table"><caption>自行车功能结构</caption><thead><tr><th scope="col">模块编号</th><th scope="col">功能名称</th><th scope="col">需要解决的问题</th><th scope="col">优先级</th></tr></thead><tbody><tr><td>F001</td><td>骑行驱动</td><td>如何让自行车前进？</td><td>P0</td></tr><tr><td>F002</td><td>方向控制</td><td>如何让自行车转弯？</td><td>P0</td></tr><tr><td>F003</td><td>减速与制动</td><td>如何让自行车安全停下？</td><td>P0</td></tr><tr><td>F004</td><td>骑行稳定性</td><td>如何让自行车稳定地行驶？</td><td>P0</td></tr><tr><td>F005</td><td>人体适配</td><td>不同身高的人如何使用？</td><td>P0</td></tr><tr><td>F006</td><td>骑行舒适性</td><td>如何减少长时间骑行的不适？</td><td>P1</td></tr><tr><td>F007</td><td>坡度与速度适应</td><td>如何适应不同骑行阻力？</td><td>P1</td></tr><tr><td>F008</td><td>夜间可见性</td><td>如何让用户看清道路并被看见？</td><td>P0</td></tr><tr><td>F009</td><td>雨天防溅</td><td>如何减少水和泥污的影响？</td><td>P1</td></tr><tr><td>F010</td><td>临时停放</td><td>不骑车时如何方便地停放？</td><td>P1</td></tr><tr><td>F011</td><td>物品携带</td><td>如何携带书包等随身物品？</td><td>P1</td></tr><tr><td>F012</td><td>防盗配合</td><td>如何方便用户锁车？</td><td>P1</td></tr><tr><td>F013</td><td>日常检查与维护</td><td>如何发现异常并维持正常使用？</td><td>P0</td></tr><tr><td>F014</td><td>产品交付与使用指导</td><td>如何让用户正确开始使用？</td><td>P0</td></tr></tbody></table></div>
+<p>每一项都作为独立的功能需求进行拆解，保证能够被理解、执行和验证。</p>
+<h2 id="part-3" tabindex="-1"><strong>第三部分：详细功能需求</strong></h2>
+<h3 id="function-f001" tabindex="-1"><strong>F001.FR001 自行车骑行驱动功能</strong></h3>
+<h4 id="section-11" tabindex="-1"><strong>一、背景说明</strong></h4>
+<p>自行车最基本的作用是帮助用户从一个地点移动到另一个地点。</p>
+<p>如果自行车无法通过用户踩踏实现前进，整个产品就失去了最核心的价值。</p>
+<p>因此，骑行驱动是首要需求。</p>
+<h4 id="section-11" tabindex="-1"><strong>二、功能描述</strong></h4>
+<p>用户能够坐在自行车上，通过双脚交替踩踏脚踏板，使自行车向前行驶。</p>
+<p>需要满足：</p>
+<ol>
+<li>用户踩踏时，自行车能够产生连续前进运动。</li>
+<li>用户停止踩踏后，可以在适当条件下利用惯性继续滑行。</li>
+<li>用户可以通过改变踩踏频率和力度调节骑行速度。</li>
+<li>正常使用过程中不应出现非预期的动力传递中断。</li>
+</ol>
+<h4 id="section-11" tabindex="-1"><strong>三、优先级</strong></h4>
+<p><strong>P0 — 必须完成</strong></p>
+<p>没有该功能，自行车无法实现基本移动。</p>
+<h4 id="section-11" tabindex="-1"><strong>四、输入/前置条件</strong></h4>
+<p><strong>输入：</strong></p>
+<ul>
+<li>用户踩踏动作</li>
+<li>用户施加的踩踏力量</li>
+</ul>
+<p><strong>前置条件：</strong></p>
+<ul>
+<li>自行车已经正确装配。</li>
+<li>轮胎状态正常。</li>
+<li>驱动相关部件处于可使用状态。</li>
+<li>用户具备基本骑行能力。</li>
+<li>骑行场地适合安全测试。</li>
+</ul>
+<h4 id="section-11" tabindex="-1"><strong>五、处理流程</strong></h4>
+<ol>
+<li>用户坐到自行车上。</li>
+<li>用户双脚分别放置在脚踏板上。</li>
+<li>用户开始交替向下踩踏。</li>
+<li>自行车将踩踏产生的动力传递至驱动轮。</li>
+<li>车轮旋转，自行车开始向前移动。</li>
+<li>用户持续踩踏，自行车持续前进。</li>
+<li>用户停止踩踏，自行车根据速度和路面条件逐渐减速。</li>
+</ol>
+<h4 id="section-11" tabindex="-1"><strong>六、输出/后置条件</strong></h4>
+<p><strong>输出：</strong></p>
+<ul>
+<li>自行车发生可控的向前位移。</li>
+<li>用户能够通过踩踏持续骑行。</li>
+</ul>
+<p><strong>后置条件：</strong></p>
+<ul>
+<li>驱动相关部件没有异常脱落或损坏。</li>
+<li>自行车仍然处于能够继续使用的状态。</li>
+</ul>
+<h4 id="section-11" tabindex="-1"><strong>七、补充说明</strong></h4>
+<p>本功能不要求达到专业赛车速度。</p>
+<p>重点是普通用户能够稳定、轻松地完成日常骑行。</p>
+<p>传动效率、踩踏阻力等具体指标，应在产品验证阶段进一步确定。</p>
+<h4 id="section-11" tabindex="-1"><strong>八、如何设计验证</strong></h4>
+<p><strong>测试编号：T001</strong></p>
+<p>测试场景：平坦、干燥、封闭的安全道路。</p>
+<p>测试步骤：</p>
+<ol>
+<li>检查自行车状态。</li>
+<li>由具备骑行能力的测试人员开始踩踏。</li>
+<li>连续骑行 5 km。</li>
+<li>中途多次停止踩踏并恢复。</li>
+<li>记录是否出现动力传递异常。</li>
+</ol>
+<p>通过标准：</p>
+<ul>
+<li>能够正常起步和持续前进。</li>
+<li>骑行过程中无掉链、异常卡滞或驱动失效。</li>
+<li>停止踩踏后可正常滑行。</li>
+<li>完成骑行后仍可继续使用。</li>
+</ul>
+<h3 id="function-f002" tabindex="-1"><strong>F002.FR001 自行车方向控制功能</strong></h3>
+<h4 id="section-12" tabindex="-1"><strong>一、背景说明</strong></h4>
+<p>实际道路不可能永远是直线。</p>
+<p>用户在经过路口、转弯、避让静止障碍物等场景时，需要主动控制自行车的行驶方向。</p>
+<p>如果方向不可控，即使自行车能够前进，也无法满足实际出行需求。</p>
+<h4 id="section-12" tabindex="-1"><strong>二、功能描述</strong></h4>
+<p>用户通过操纵车把控制自行车行驶方向。</p>
+<p>需要满足：</p>
+<ol>
+<li>用户能够正常向左、向右转向。</li>
+<li>用户能够在转弯后恢复直线行驶。</li>
+<li>正常转向范围内不应发生异常卡死。</li>
+<li>转向动作应符合普通成年用户的操作习惯。</li>
+<li>不应出现明显的方向控制失灵。</li>
+</ol>
+<h4 id="section-12" tabindex="-1"><strong>三、优先级</strong></h4>
+<p><strong>P0 — 必须完成</strong></p>
+<p>方向控制直接影响产品能否安全使用。</p>
+<h4 id="section-12" tabindex="-1"><strong>四、输入/前置条件</strong></h4>
+<p><strong>输入：</strong></p>
+<ul>
+<li>用户向左或向右操纵车把的动作</li>
+<li>用户的身体平衡与重心调整</li>
+</ul>
+<p><strong>前置条件：</strong></p>
+<ul>
+<li>自行车正在正常行驶或准备起步。</li>
+<li>转向相关部件状态正常。</li>
+<li>前方具有安全的转向空间。</li>
+<li>测试人员具备基本转弯能力。</li>
+</ul>
+<h4 id="section-12" tabindex="-1"><strong>五、处理流程</strong></h4>
+<ol>
+<li>用户正常向前骑行。</li>
+<li>前方出现需要转弯的道路。</li>
+<li>用户观察目标方向及周围环境。</li>
+<li>用户提前降低至适合转弯的速度。</li>
+<li>用户通过车把及身体姿态控制行驶方向。</li>
+<li>自行车沿目标方向完成转弯。</li>
+<li>用户逐渐恢复正常直线骑行状态。</li>
+</ol>
+<h4 id="section-12" tabindex="-1"><strong>六、输出/后置条件</strong></h4>
+<p><strong>输出：</strong></p>
+<ul>
+<li>自行车按照用户意图改变行驶方向。</li>
+<li>用户能够完成正常转弯。</li>
+</ul>
+<p><strong>后置条件：</strong></p>
+<ul>
+<li>转向结束后仍然可以正常控制车辆。</li>
+<li>方向控制没有异常松动、卡滞。</li>
+</ul>
+<h4 id="section-12" tabindex="-1"><strong>七、补充说明</strong></h4>
+<p>方向控制必须与稳定性和制动能力共同考虑。</p>
+<p>本功能不以高速急转弯或极限避障作为目标。</p>
+<h4 id="section-12" tabindex="-1"><strong>八、如何设计验证</strong></h4>
+<p><strong>测试编号：T002</strong></p>
+<p>测试场景：封闭平坦场地设置左转、右转和连续弯道。</p>
+<p>测试步骤：</p>
+<ol>
+<li>测试人员以安全速度进入测试路线。</li>
+<li>完成 10 次左转。</li>
+<li>完成 10 次右转。</li>
+<li>完成连续 S 形路线。</li>
+<li>检查转向响应和部件状态。</li>
+</ol>
+<p>通过标准：</p>
+<ul>
+<li>能够按路线完成所有测试。</li>
+<li>没有明显转向卡死、失控或异常松动。</li>
+<li>转弯后能够恢复稳定直线骑行。</li>
+</ul>
+<h3 id="function-f003" tabindex="-1"><strong>F003.FR001 自行车减速与制动功能</strong></h3>
+<h4 id="section-13" tabindex="-1"><strong>一、背景说明</strong></h4>
+<p>用户在实际骑行过程中会遇到红灯、路口、行人及其他需要停车的情况。</p>
+<p>因此，自行车不仅要能够前进，还必须能够根据用户意图及时减速和停止。</p>
+<p>制动能力是最重要的安全需求之一。</p>
+<h4 id="section-13" tabindex="-1"><strong>二、功能描述</strong></h4>
+<p>用户通过刹车操作控制自行车速度。</p>
+<p>具体要求：</p>
+<ol>
+<li>用户能够主动减速。</li>
+<li>用户能够使正在行驶的自行车停止。</li>
+<li>左右刹车操作必须具有清晰的使用说明。</li>
+<li>制动过程中应保持可控。</li>
+<li>制动系统不能在正常使用条件下突然失效。</li>
+<li>制动操作应具有可预期的响应。</li>
+</ol>
+<h4 id="section-13" tabindex="-1"><strong>三、优先级</strong></h4>
+<p><strong>P0 — 必须完成，安全关键需求</strong></p>
+<p>任何不符合安全要求的样车都不得交付使用。</p>
+<h4 id="section-13" tabindex="-1"><strong>四、输入/前置条件</strong></h4>
+<p><strong>输入：</strong></p>
+<ul>
+<li>用户操作刹车手柄的动作与力度</li>
+</ul>
+<p><strong>前置条件：</strong></p>
+<ul>
+<li>刹车系统处于正常状态。</li>
+<li>轮胎和路面具备必要的附着条件。</li>
+<li>用户知道正确的制动操作方法。</li>
+<li>测试由具备资质或经验的人员在受控场地完成。</li>
+</ul>
+<h4 id="section-13" tabindex="-1"><strong>五、处理流程</strong></h4>
+<ol>
+<li>用户骑行过程中发现需要减速。</li>
+<li>用户提前判断路况。</li>
+<li>用户逐渐操作刹车手柄。</li>
+<li>制动系统对车轮产生制动力。</li>
+<li>自行车速度降低。</li>
+<li>用户根据停车需要继续调整制动力。</li>
+<li>自行车最终停止。</li>
+<li>用户通过落脚等方式保持停车后的平衡。</li>
+</ol>
+<h4 id="section-13" tabindex="-1"><strong>六、输出/后置条件</strong></h4>
+<p><strong>输出：</strong></p>
+<ul>
+<li>自行车速度降低。</li>
+<li>自行车最终实现可控停止。</li>
+</ul>
+<p><strong>后置条件：</strong></p>
+<ul>
+<li>刹车系统仍然正常。</li>
+<li>车辆没有发生因制动故障导致的失控。</li>
+</ul>
+<h4 id="section-13" tabindex="-1"><strong>七、补充说明</strong></h4>
+<p>制动效果受到车速、轮胎、载荷、路面和天气影响。</p>
+<p>不能仅凭“能刹住”就认定安全。</p>
+<p>必须依据销售地区适用的自行车安全要求开展测试。</p>
+<h4 id="section-13" tabindex="-1"><strong>八、如何设计验证</strong></h4>
+<p><strong>测试编号：T003</strong></p>
+<p>测试场景：专业人员在封闭测试场地进行。</p>
+<p>教学示例的初步验收目标：</p>
+<ul>
+<li>初始速度：15 km/h。</li>
+<li>干燥平整路面制动距离：不超过 5 m。</li>
+<li>湿润平整路面制动距离：不超过 8 m。</li>
+<li>以上距离不包含人的反应距离。</li>
+</ul>
+<p>上述数值仅为本项目的示例测试目标，不能代替法规标准或证明产品安全。</p>
+<p>测试步骤：</p>
+<ol>
+<li>检查制动系统。</li>
+<li>达到规定测试速度。</li>
+<li>按统一操作方法启动制动。</li>
+<li>测量制动距离。</li>
+<li>分别记录干燥和湿润条件下的测试结果。</li>
+<li>检查制动过程是否稳定。</li>
+</ol>
+<p>通过标准：</p>
+<ul>
+<li>达到最终确认的制动性能目标。</li>
+<li>无制动失灵。</li>
+<li>无异常失控。</li>
+<li>通过适用的安全检测要求。</li>
+</ul>
+<h3 id="function-f004" tabindex="-1"><strong>F004.FR001 自行车骑行稳定性功能</strong></h3>
+<h4 id="section-14" tabindex="-1"><strong>一、背景说明</strong></h4>
+<p>普通自行车需要骑行者保持平衡，但产品本身也必须具有合理的稳定性。</p>
+<p>如果自行车存在明显跑偏、结构松动或异常抖动，会增加操控难度和使用风险。</p>
+<h4 id="section-14" tabindex="-1"><strong>二、功能描述</strong></h4>
+<p>自行车应能够支持用户在正常城市道路上稳定行驶。</p>
+<p>具体要求：</p>
+<ol>
+<li>正常直线骑行时不应出现异常跑偏。</li>
+<li>正常转向时不得出现结构性失稳。</li>
+<li>通过轻微路面不平整区域后仍能继续正常骑行。</li>
+<li>正常载荷下不得出现明显结构异常。</li>
+<li>用户可通过正常骑行操作维持平衡。</li>
+</ol>
+<h4 id="section-14" tabindex="-1"><strong>三、优先级</strong></h4>
+<p><strong>P0 — 必须完成</strong></p>
+<h4 id="section-14" tabindex="-1"><strong>四、输入/前置条件</strong></h4>
+<p><strong>输入：</strong></p>
+<ul>
+<li>用户体重</li>
+<li>用户骑行动作</li>
+<li>路面状态</li>
+<li>自行车运行速度</li>
+</ul>
+<p><strong>前置条件：</strong></p>
+<ul>
+<li>车辆正确装配。</li>
+<li>轮胎状态正常。</li>
+<li>测试在项目规定的使用范围内进行。</li>
+</ul>
+<h4 id="section-14" tabindex="-1"><strong>五、处理流程</strong></h4>
+<ol>
+<li>用户骑上自行车。</li>
+<li>用户开始踩踏。</li>
+<li>自行车沿目标方向行驶。</li>
+<li>用户通过身体姿态及车把调整平衡。</li>
+<li>自行车经过正常道路变化。</li>
+<li>用户继续保持正常的骑行姿态。</li>
+</ol>
+<h4 id="section-14" tabindex="-1"><strong>六、输出/后置条件</strong></h4>
+<p><strong>输出：</strong></p>
+<ul>
+<li>用户能够进行稳定、可控的骑行。</li>
+<li>自行车没有出现非正常结构性失稳。</li>
+</ul>
+<p><strong>后置条件：</strong></p>
+<ul>
+<li>车辆仍然能够保持正常结构状态。</li>
+</ul>
+<h4 id="section-14" tabindex="-1"><strong>七、补充说明</strong></h4>
+<p>自行车不是静止时自动平衡的产品。</p>
+<p>因此，测试时要区分：</p>
+<ul>
+<li>骑行者操作失误造成的失衡。</li>
+<li>自行车本身设计或质量异常造成的失稳。</li>
+</ul>
+<h4 id="section-14" tabindex="-1"><strong>八、如何设计验证</strong></h4>
+<p><strong>测试编号：T004</strong></p>
+<p>测试步骤：</p>
+<ol>
+<li>选择 3 名具备正常骑行能力的测试人员。</li>
+<li>分别完成直线、正常转弯和轻微起伏路面骑行。</li>
+<li>记录异常跑偏、抖动或失稳情况。</li>
+<li>测试结束后检查车辆结构。</li>
+</ol>
+<p>通过标准：</p>
+<ul>
+<li>无可重复出现的异常跑偏或结构性失稳。</li>
+<li>无异常松动和损坏。</li>
+<li>测试人员能够正常控制行驶方向。</li>
+</ul>
+<h3 id="function-f005" tabindex="-1"><strong>F005.FR001 自行车人体适配功能</strong></h3>
+<h4 id="section-15" tabindex="-1"><strong>一、背景说明</strong></h4>
+<p>不同用户的身高、腿长和骑行习惯存在差异。</p>
+<p>如果自行车无法适应目标用户体型，可能导致骑行姿势不合适、使用不便和舒适性下降。</p>
+<h4 id="section-15" tabindex="-1"><strong>二、功能描述</strong></h4>
+<p>自行车需要在确定的目标用户范围内提供合理的骑行姿势适配能力。</p>
+<p>具体要求：</p>
+<ol>
+<li>用户能够调整车座高度。</li>
+<li>用户能够方便地握住车把。</li>
+<li>用户正常踩踏时，腿部动作不应明显受限。</li>
+<li>用户能够安全完成上车和下车。</li>
+<li>调整完成后，相关部件能够稳定固定。</li>
+<li>调节范围与使用限制必须清晰标识。</li>
+</ol>
+<h4 id="section-15" tabindex="-1"><strong>三、优先级</strong></h4>
+<p><strong>P0 — 必须完成</strong></p>
+<h4 id="section-15" tabindex="-1"><strong>四、输入/前置条件</strong></h4>
+<p><strong>输入：</strong></p>
+<ul>
+<li>用户身高</li>
+<li>用户腿长</li>
+<li>用户骑行姿势需求</li>
+</ul>
+<p><strong>前置条件：</strong></p>
+<ul>
+<li>用户处于产品支持的体型范围内。</li>
+<li>自行车处于停止状态。</li>
+<li>调节部件正常。</li>
+</ul>
+<h4 id="section-15" tabindex="-1"><strong>五、处理流程</strong></h4>
+<ol>
+<li>用户准备使用自行车。</li>
+<li>用户根据自己的体型检查车座位置。</li>
+<li>用户调整车座高度。</li>
+<li>用户确认调整位置处于允许范围内。</li>
+<li>用户固定相关部件。</li>
+<li>用户上车进行短距离试骑。</li>
+<li>用户确认姿势合适后开始正式骑行。</li>
+</ol>
+<h4 id="section-15" tabindex="-1"><strong>六、输出/后置条件</strong></h4>
+<p><strong>输出：</strong></p>
+<ul>
+<li>自行车完成针对用户的基本适配。</li>
+<li>用户能够以合适的姿势使用车辆。</li>
+</ul>
+<p><strong>后置条件：</strong></p>
+<ul>
+<li>调整部件牢固固定。</li>
+<li>车座等部件不存在明显异常移动。</li>
+</ul>
+<h4 id="section-15" tabindex="-1"><strong>七、补充说明</strong></h4>
+<p>人体适配不意味着一辆自行车能够适合所有人。</p>
+<p>本项目首先针对约 165–185 cm 的成年用户开展适配验证。</p>
+<p>如无法覆盖整个目标范围，应调整产品尺寸方案，而不是让用户勉强骑行。</p>
+<h4 id="section-15" tabindex="-1"><strong>八、如何设计验证</strong></h4>
+<p><strong>测试编号：T005</strong></p>
+<p>测试步骤：</p>
+<ol>
+<li>选择不同身高的目标用户，覆盖项目身高范围两端。</li>
+<li>让用户自行调整车座。</li>
+<li>观察调整过程是否容易理解。</li>
+<li>完成约 10 分钟试骑。</li>
+<li>检查调整部件固定情况。</li>
+</ol>
+<p>通过标准：</p>
+<ul>
+<li>测试用户能够找到合适且安全的骑行位置。</li>
+<li>所有调节均在允许范围内。</li>
+<li>调整后没有异常松动或滑移。</li>
+<li>无明显因尺寸不匹配而无法正常使用的情况。</li>
+</ul>
+<h3 id="function-f006" tabindex="-1"><strong>F006.FR001 自行车骑行舒适性功能</strong></h3>
+<h4 id="section-16" tabindex="-1"><strong>一、背景说明</strong></h4>
+<p>即使自行车能够正常骑行，如果用户在短时间内就出现明显不适，也难以满足日常通勤需求。</p>
+<p>舒适性直接影响用户是否愿意长期使用产品。</p>
+<h4 id="section-16" tabindex="-1"><strong>二、功能描述</strong></h4>
+<p>在正常城市通勤场景下，为用户提供合理的乘坐和操作舒适性。</p>
+<p>主要要求：</p>
+<ol>
+<li>车座能够提供适当支撑。</li>
+<li>握把不应造成明显操作不适。</li>
+<li>正常路面上的振动不应明显影响骑行体验。</li>
+<li>用户能够维持相对自然的骑行姿势。</li>
+<li>常规短途骑行后不应出现普遍性的严重不适反馈。</li>
+</ol>
+<h4 id="section-16" tabindex="-1"><strong>三、优先级</strong></h4>
+<p><strong>P1 — 重要需求</strong></p>
+<h4 id="section-16" tabindex="-1"><strong>四、输入/前置条件</strong></h4>
+<p><strong>输入：</strong></p>
+<ul>
+<li>用户骑行时长</li>
+<li>用户体型</li>
+<li>骑行路况</li>
+<li>用户舒适度反馈</li>
+</ul>
+<p><strong>前置条件：</strong></p>
+<ul>
+<li>已完成合理的骑行姿势调整。</li>
+<li>路面属于产品使用范围。</li>
+<li>用户自身身体状态适合骑行。</li>
+</ul>
+<h4 id="section-16" tabindex="-1"><strong>五、处理流程</strong></h4>
+<ol>
+<li>用户完成骑行准备。</li>
+<li>用户开始正常骑行。</li>
+<li>用户通过车座、车把和脚踏维持骑行姿势。</li>
+<li>自行车经过正常道路。</li>
+<li>用户持续骑行至目的地。</li>
+<li>用户根据实际体验评价舒适程度。</li>
+</ol>
+<h4 id="section-16" tabindex="-1"><strong>六、输出/后置条件</strong></h4>
+<p><strong>输出：</strong></p>
+<ul>
+<li>用户完成预定短途骑行。</li>
+<li>形成可记录的舒适性评价。</li>
+</ul>
+<p><strong>后置条件：</strong></p>
+<ul>
+<li>用户没有因产品明显不适配而被迫提前结束骑行。</li>
+</ul>
+<h4 id="section-16" tabindex="-1"><strong>七、补充说明</strong></h4>
+<p>舒适性包含一定主观因素，不能只由单个测试人员判断。</p>
+<p>需要同时收集多名用户的评价。</p>
+<h4 id="section-16" tabindex="-1"><strong>八、如何设计验证</strong></h4>
+<p><strong>测试编号：T006</strong></p>
+<p>测试步骤：</p>
+<ol>
+<li>邀请至少 5 名目标用户。</li>
+<li>每人连续骑行约 30 分钟。</li>
+<li>记录臀部、手掌、腰背等部位的不适情况。</li>
+<li>使用 1–5 分的舒适度评分量表。</li>
+<li>汇总测试结果。</li>
+</ol>
+<p>初步通过标准：</p>
+<ul>
+<li>至少 80% 的测试人员评分不低于 4 分。</li>
+<li>没有集中出现同一种严重不适问题。</li>
+<li>影响正常骑行的问题得到整改并复测。</li>
+</ul>
+<h3 id="function-f007" tabindex="-1"><strong>F007.FR001 自行车坡度与速度适应功能</strong></h3>
+<h4 id="section-17" tabindex="-1"><strong>一、背景说明</strong></h4>
+<p>实际城市道路可能包含平路、缓坡以及不同阻力的路段。</p>
+<p>如果自行车仅在理想平路上容易骑行，可能无法覆盖主要通勤场景。</p>
+<h4 id="section-17" tabindex="-1"><strong>二、功能描述</strong></h4>
+<p>自行车能够适应产品规定范围内的道路坡度和骑行速度需求。</p>
+<p>本项目采用具有变速能力的方案作为初步产品需求。</p>
+<p>具体要求：</p>
+<ol>
+<li>用户能够根据路况选择合适的骑行档位。</li>
+<li>在正常骑行状态下能够切换档位。</li>
+<li>档位切换后，用户能够感觉到踩踏阻力变化。</li>
+<li>变速过程中不应出现非预期的卡死或掉链。</li>
+<li>普通用户能够理解基本变速方法。</li>
+</ol>
+<h4 id="section-17" tabindex="-1"><strong>三、优先级</strong></h4>
+<p><strong>P1 — 重要需求</strong></p>
+<h4 id="section-17" tabindex="-1"><strong>四、输入/前置条件</strong></h4>
+<p><strong>输入：</strong></p>
+<ul>
+<li>用户的变速操作</li>
+<li>当前骑行速度</li>
+<li>道路坡度</li>
+<li>用户踩踏状态</li>
+</ul>
+<p><strong>前置条件：</strong></p>
+<ul>
+<li>变速相关部件处于正常状态。</li>
+<li>用户知道基本的变速操作要求。</li>
+<li>路线处于产品规定的使用范围内。</li>
+</ul>
+<h4 id="section-17" tabindex="-1"><strong>五、处理流程</strong></h4>
+<ol>
+<li>用户在平坦路面正常骑行。</li>
+<li>用户发现前方进入缓坡。</li>
+<li>用户按照说明选择更合适的档位。</li>
+<li>自行车完成档位变化。</li>
+<li>用户继续以合适的踩踏节奏骑行。</li>
+<li>道路恢复平坦后，用户再次调整档位。</li>
+</ol>
+<h4 id="section-17" tabindex="-1"><strong>六、输出/后置条件</strong></h4>
+<p><strong>输出：</strong></p>
+<ul>
+<li>档位变化成功。</li>
+<li>用户能够适应不同的正常骑行阻力。</li>
+</ul>
+<p><strong>后置条件：</strong></p>
+<ul>
+<li>变速相关部件保持正常。</li>
+<li>自行车能够继续骑行。</li>
+</ul>
+<h4 id="section-17" tabindex="-1"><strong>七、补充说明</strong></h4>
+<p>本项目不追求极限爬坡能力。</p>
+<p>具体支持的坡度范围，应通过真实道路测试和目标用户调研确定。</p>
+<h4 id="section-17" tabindex="-1"><strong>八、如何设计验证</strong></h4>
+<p><strong>测试编号：T007</strong></p>
+<p>测试步骤：</p>
+<ol>
+<li>在平坦道路进行多次变速。</li>
+<li>检查档位切换是否正常。</li>
+<li>选择有适当坡度的安全测试路线。</li>
+<li>让目标用户完成缓坡骑行。</li>
+<li>检查是否出现掉链、卡滞和异常噪声。</li>
+</ol>
+<p>通过标准：</p>
+<ul>
+<li>档位能够正常切换。</li>
+<li>无反复出现的变速失效。</li>
+<li>测试人员能够理解并完成正确操作。</li>
+<li>在规定坡度范围内可以正常骑行。</li>
+</ul>
+<h3 id="function-f008" tabindex="-1"><strong>F008.FR001 自行车夜间可见性功能</strong></h3>
+<h4 id="section-18" tabindex="-1"><strong>一、背景说明</strong></h4>
+<p>部分用户存在傍晚或夜间骑车的需求。</p>
+<p>在光线不足时，用户可能难以发现前方障碍，其他道路使用者也可能难以及时注意到自行车。</p>
+<p>因此，需要具备基本的夜间可见性。</p>
+<h4 id="section-18" tabindex="-1"><strong>二、功能描述</strong></h4>
+<p>自行车应为用户提供符合使用场景的照明及反光识别能力。</p>
+<p>具体要求：</p>
+<ol>
+<li>前方具有可使用的照明设备。</li>
+<li>后方具有可识别的红色尾灯或符合要求的可见性装置。</li>
+<li>配备适用的反光装置。</li>
+<li>用户能够识别照明设备的开启、关闭状态。</li>
+<li>正常骑行振动下设备保持固定。</li>
+<li>照明与反光配置满足销售地区适用要求。</li>
+</ol>
+<h4 id="section-18" tabindex="-1"><strong>三、优先级</strong></h4>
+<p><strong>P0 — 必须完成</strong></p>
+<p>本项目的使用范围包含傍晚及夜间城市通勤。</p>
+<h4 id="section-18" tabindex="-1"><strong>四、输入/前置条件</strong></h4>
+<p><strong>输入：</strong></p>
+<ul>
+<li>用户开启照明的操作</li>
+<li>环境光照条件</li>
+</ul>
+<p><strong>前置条件：</strong></p>
+<ul>
+<li>照明设备已正确安装。</li>
+<li>电量等工作条件正常。</li>
+<li>相关反光装置没有被遮挡。</li>
+</ul>
+<h4 id="section-18" tabindex="-1"><strong>五、处理流程</strong></h4>
+<ol>
+<li>用户准备在光线不足时骑行。</li>
+<li>用户检查照明设备状态。</li>
+<li>用户开启所需照明。</li>
+<li>前方照明设备提供可用的道路照明。</li>
+<li>后方及其他可见性装置帮助其他道路使用者识别自行车。</li>
+<li>用户结束骑行后按说明关闭或管理照明设备。</li>
+</ol>
+<h4 id="section-18" tabindex="-1"><strong>六、输出/后置条件</strong></h4>
+<p><strong>输出：</strong></p>
+<ul>
+<li>自行车具备规定的照明与可见性。</li>
+<li>用户能够确认设备是否正常工作。</li>
+</ul>
+<p><strong>后置条件：</strong></p>
+<ul>
+<li>照明设备正常固定。</li>
+<li>设备仍可继续使用。</li>
+</ul>
+<h4 id="section-18" tabindex="-1"><strong>七、补充说明</strong></h4>
+<p>具有车灯不代表适合在所有夜间道路和天气条件下骑行。</p>
+<p>必须明确设备适用环境，并遵守道路交通规定。</p>
+<h4 id="section-18" tabindex="-1"><strong>八、如何设计验证</strong></h4>
+<p><strong>测试编号：T008</strong></p>
+<p>测试步骤：</p>
+<ol>
+<li>在受控低照度环境中开启灯具。</li>
+<li>检查前方照明效果。</li>
+<li>从规定观察位置检查后方识别效果。</li>
+<li>检查反光装置。</li>
+<li>进行正常道路振动测试后再次检查固定状态。</li>
+</ol>
+<p>通过标准：</p>
+<ul>
+<li>所有规定照明装置正常工作。</li>
+<li>前后可见性达到项目确认的测试要求。</li>
+<li>无设备异常脱落。</li>
+<li>满足适用的照明、反光相关要求。</li>
+</ul>
+<h3 id="function-f009" tabindex="-1"><strong>F009.FR001 自行车雨天防溅功能</strong></h3>
+<h4 id="section-19" tabindex="-1"><strong>一、背景说明</strong></h4>
+<p>用户在日常通勤过程中可能经过湿润路面或者少量积水区域。</p>
+<p>车轮旋转可能把水和泥污溅到衣物上，影响通勤体验。</p>
+<h4 id="section-19" tabindex="-1"><strong>二、功能描述</strong></h4>
+<p>在产品规定的普通湿润道路使用条件下，降低车轮产生的水和泥污飞溅。</p>
+<p>具体要求：</p>
+<ol>
+<li>对主要飞溅方向提供适当遮挡。</li>
+<li>防溅相关部件不能干扰车轮正常旋转。</li>
+<li>正常骑行时不得出现明显异常松动。</li>
+<li>清理泥污的方式应简单易懂。</li>
+</ol>
+<h4 id="section-19" tabindex="-1"><strong>三、优先级</strong></h4>
+<p><strong>P1 — 重要需求</strong></p>
+<h4 id="section-19" tabindex="-1"><strong>四、输入/前置条件</strong></h4>
+<p><strong>输入：</strong></p>
+<ul>
+<li>湿润路面</li>
+<li>正常车轮旋转</li>
+<li>少量积水或泥污</li>
+</ul>
+<p><strong>前置条件：</strong></p>
+<ul>
+<li>防溅相关部件正确安装。</li>
+<li>道路不存在超出使用范围的积水风险。</li>
+</ul>
+<h4 id="section-19" tabindex="-1"><strong>五、处理流程</strong></h4>
+<ol>
+<li>用户骑行至湿润路面。</li>
+<li>车轮旋转并带起少量水或泥污。</li>
+<li>防溅装置对主要飞溅方向形成遮挡。</li>
+<li>用户完成正常骑行。</li>
+<li>用户在骑行后视情况清理泥污。</li>
+</ol>
+<h4 id="section-19" tabindex="-1"><strong>六、输出/后置条件</strong></h4>
+<p><strong>输出：</strong></p>
+<ul>
+<li>飞溅至用户衣物上的水和泥污减少。</li>
+<li>车辆可以继续正常行驶。</li>
+</ul>
+<p><strong>后置条件：</strong></p>
+<ul>
+<li>防溅装置没有发生干涉、脱落。</li>
+</ul>
+<h4 id="section-19" tabindex="-1"><strong>七、补充说明</strong></h4>
+<p>防溅功能不等于防水能力，也不保证暴雨或深积水条件下的安全使用。</p>
+<h4 id="section-19" tabindex="-1"><strong>八、如何设计验证</strong></h4>
+<p><strong>测试编号：T009</strong></p>
+<p>测试步骤：</p>
+<ol>
+<li>设置统一湿润路面测试条件。</li>
+<li>分别使用带防溅装置和不带装置的对照车辆。</li>
+<li>在相同速度和路线下行驶。</li>
+<li>观察并记录衣物模拟靶面的水迹。</li>
+<li>检查装置与车轮是否发生干涉。</li>
+</ol>
+<p>通过标准：</p>
+<ul>
+<li>相同条件下飞溅量明显低于对照组。</li>
+<li>不影响正常骑行。</li>
+<li>无异常松动或脱落。</li>
+</ul>
+<h3 id="function-f010" tabindex="-1"><strong>F010.FR001 自行车临时停放功能</strong></h3>
+<h4 id="section-20" tabindex="-1"><strong>一、背景说明</strong></h4>
+<p>用户到达教室、商店或其他目的地后，通常需要暂时离开自行车。</p>
+<p>如果车辆必须一直由人扶住，就无法满足日常停车需求。</p>
+<h4 id="section-20" tabindex="-1"><strong>二、功能描述</strong></h4>
+<p>自行车能够在适当的地面条件下方便地临时停放。</p>
+<p>具体要求：</p>
+<ol>
+<li>用户能够方便地展开和收起停车支撑装置。</li>
+<li>在规定条件下，自行车能够保持稳定停放。</li>
+<li>正常骑行时停车装置不能意外落下。</li>
+<li>停车操作应易于理解。</li>
+</ol>
+<h4 id="section-20" tabindex="-1"><strong>三、优先级</strong></h4>
+<p><strong>P1 — 重要需求</strong></p>
+<h4 id="section-20" tabindex="-1"><strong>四、输入/前置条件</strong></h4>
+<p><strong>输入：</strong></p>
+<ul>
+<li>用户展开或收起停车支撑装置的动作</li>
+</ul>
+<p><strong>前置条件：</strong></p>
+<ul>
+<li>自行车已经停止。</li>
+<li>停车地面处于允许使用条件内。</li>
+<li>停车装置正常。</li>
+</ul>
+<h4 id="section-20" tabindex="-1"><strong>五、处理流程</strong></h4>
+<ol>
+<li>用户骑行至停车区域。</li>
+<li>用户完全停止车辆。</li>
+<li>用户下车并扶稳车辆。</li>
+<li>用户展开停车支撑装置。</li>
+<li>用户确认车辆能够稳定站立。</li>
+<li>用户需要重新骑行时收起支撑装置。</li>
+<li>用户确认装置收起后开始骑行。</li>
+</ol>
+<h4 id="section-20" tabindex="-1"><strong>六、输出/后置条件</strong></h4>
+<p><strong>输出：</strong></p>
+<ul>
+<li>自行车能够在规定条件下独立停放。</li>
+</ul>
+<p><strong>后置条件：</strong></p>
+<ul>
+<li>停车支撑装置处于正确位置。</li>
+<li>重新骑行时装置不会干扰车辆运行。</li>
+</ul>
+<h4 id="section-20" tabindex="-1"><strong>七、补充说明</strong></h4>
+<p>临时停放不等于防盗，也不能保证任何坡度和地面条件下都稳定。</p>
+<h4 id="section-20" tabindex="-1"><strong>八、如何设计验证</strong></h4>
+<p><strong>测试编号：T010</strong></p>
+<p>测试步骤：</p>
+<ol>
+<li>在平坦坚实地面展开支撑装置。</li>
+<li>无人扶持停放 10 分钟。</li>
+<li>重复展开和收起 30 次。</li>
+<li>检查是否出现异常松动。</li>
+<li>检查收起状态是否牢固。</li>
+</ol>
+<p>通过标准：</p>
+<ul>
+<li>规定停放条件下没有自行倾倒。</li>
+<li>支撑装置能够正常操作。</li>
+<li>收起后不会非预期展开。</li>
+</ul>
+<h3 id="function-f011" tabindex="-1"><strong>F011.FR001 自行车随身物品携带功能</strong></h3>
+<h4 id="section-21" tabindex="-1"><strong>一、背景说明</strong></h4>
+<p>用户在通勤过程中可能需要携带书包、文件袋或少量生活用品。</p>
+<p>如果用户只能将物品一直背在身上，可能增加骑行不适。</p>
+<h4 id="section-21" tabindex="-1"><strong>二、功能描述</strong></h4>
+<p>自行车提供适当的物品携带能力。</p>
+<p>具体要求：</p>
+<ol>
+<li>具有明确的物品放置或固定位置。</li>
+<li>用户能够方便地装入和取出物品。</li>
+<li>物品不能与车轮、脚踏等运动部位发生干涉。</li>
+<li>必须标明载物重量上限。</li>
+<li>在允许载物范围内仍能正常转向和制动。</li>
+</ol>
+<h4 id="section-21" tabindex="-1"><strong>三、优先级</strong></h4>
+<p><strong>P1 — 重要需求</strong></p>
+<h4 id="section-21" tabindex="-1"><strong>四、输入/前置条件</strong></h4>
+<p><strong>输入：</strong></p>
+<ul>
+<li>用户需要携带的物品</li>
+<li>物品重量及尺寸</li>
+</ul>
+<p><strong>前置条件：</strong></p>
+<ul>
+<li>载物装置正确安装。</li>
+<li>物品重量在标示范围内。</li>
+<li>物品已按照说明固定。</li>
+</ul>
+<h4 id="section-21" tabindex="-1"><strong>五、处理流程</strong></h4>
+<ol>
+<li>用户准备骑行。</li>
+<li>用户把随身物品放置到指定区域。</li>
+<li>用户检查物品是否稳定固定。</li>
+<li>用户开始正常骑行。</li>
+<li>物品随自行车共同移动。</li>
+<li>到达目的地后，用户取出物品。</li>
+</ol>
+<h4 id="section-21" tabindex="-1"><strong>六、输出/后置条件</strong></h4>
+<p><strong>输出：</strong></p>
+<ul>
+<li>用户能够随车携带规定范围内的物品。</li>
+</ul>
+<p><strong>后置条件：</strong></p>
+<ul>
+<li>物品没有在正常使用条件下意外掉落。</li>
+<li>载物装置未发生异常损坏。</li>
+</ul>
+<h4 id="section-21" tabindex="-1"><strong>七、补充说明</strong></h4>
+<p>本项目以日常少量载物为目标，不支持载人或运输超重货物。</p>
+<p>初步载物目标设为 3 kg，具体上限以最终验证结果为准。</p>
+<h4 id="section-21" tabindex="-1"><strong>八、如何设计验证</strong></h4>
+<p><strong>测试编号：T011</strong></p>
+<p>测试步骤：</p>
+<ol>
+<li>放入总重 3 kg 的模拟随身物品。</li>
+<li>检查是否固定牢固。</li>
+<li>在规定路线骑行 3 km。</li>
+<li>完成正常转向与制动测试。</li>
+<li>检查物品和载物装置状态。</li>
+</ol>
+<p>通过标准：</p>
+<ul>
+<li>物品没有异常脱落或移动。</li>
+<li>没有与运动部件发生干涉。</li>
+<li>自行车保持正常操控能力。</li>
+<li>载物装置无异常损坏。</li>
+</ul>
+<h3 id="function-f012" tabindex="-1"><strong>F012.FR001 自行车防盗配合功能</strong></h3>
+<h4 id="section-22" tabindex="-1"><strong>一、背景说明</strong></h4>
+<p>自行车通常停放在公共场所。</p>
+<p>用户需要通过车锁等工具降低自行车被随意移走的风险。</p>
+<p>因此，车辆应当便于锁定。</p>
+<h4 id="section-22" tabindex="-1"><strong>二、功能描述</strong></h4>
+<p>自行车应提供与常见自行车锁具相配合的锁车条件。</p>
+<p>具体要求：</p>
+<ol>
+<li>用户可以通过合适的锁具锁住车架。</li>
+<li>锁车位置容易识别。</li>
+<li>正常锁车操作不应损坏车辆重要部件。</li>
+<li>锁车操作不应明显影响其他功能。</li>
+<li>使用说明需要介绍正确的锁车方式。</li>
+</ol>
+<h4 id="section-22" tabindex="-1"><strong>三、优先级</strong></h4>
+<p><strong>P1 — 重要需求</strong></p>
+<h4 id="section-22" tabindex="-1"><strong>四、输入/前置条件</strong></h4>
+<p><strong>输入：</strong></p>
+<ul>
+<li>用户使用的兼容锁具</li>
+<li>合适的固定停车设施</li>
+</ul>
+<p><strong>前置条件：</strong></p>
+<ul>
+<li>自行车已停止。</li>
+<li>用户拥有可使用的锁具。</li>
+<li>停车地点允许停放自行车。</li>
+</ul>
+<h4 id="section-22" tabindex="-1"><strong>五、处理流程</strong></h4>
+<ol>
+<li>用户到达停车位置。</li>
+<li>用户找到固定停车设施。</li>
+<li>用户使用锁具连接车架与固定设施。</li>
+<li>用户完成锁具闭合。</li>
+<li>用户检查锁具是否锁定。</li>
+<li>取车时用户打开锁具。</li>
+<li>用户移除锁具并恢复骑行。</li>
+</ol>
+<h4 id="section-22" tabindex="-1"><strong>六、输出/后置条件</strong></h4>
+<p><strong>输出：</strong></p>
+<ul>
+<li>用户能够使用合适的锁具固定车辆。</li>
+</ul>
+<p><strong>后置条件：</strong></p>
+<ul>
+<li>锁具不会影响重新骑行。</li>
+<li>车辆没有因正常锁车操作出现损坏。</li>
+</ul>
+<h4 id="section-22" tabindex="-1"><strong>七、补充说明</strong></h4>
+<p>本需求仅保证合理的锁车便利性。</p>
+<p>不能承诺车辆绝对不会被盗。</p>
+<h4 id="section-22" tabindex="-1"><strong>八、如何设计验证</strong></h4>
+<p><strong>测试编号：T012</strong></p>
+<p>测试步骤：</p>
+<ol>
+<li>选择几种常见且尺寸适合的自行车锁具。</li>
+<li>在典型自行车停车设施上进行锁车。</li>
+<li>记录操作过程和所需步骤。</li>
+<li>检查锁具与车架接触情况。</li>
+<li>检查解锁后是否可以正常骑行。</li>
+</ol>
+<p>通过标准：</p>
+<ul>
+<li>至少一种项目指定的常见锁具能够完成规范锁车。</li>
+<li>锁车过程无需拆卸车辆重要部件。</li>
+<li>锁车和解锁过程不会造成明显损坏。</li>
+</ul>
+<h3 id="function-f013" tabindex="-1"><strong>F013.FR001 自行车日常检查与维护功能</strong></h3>
+<h4 id="section-23" tabindex="-1"><strong>一、背景说明</strong></h4>
+<p>自行车在长期使用后，轮胎、制动、传动等部件可能出现磨损或异常。</p>
+<p>如果用户无法发现基础问题，可能继续使用存在安全隐患的车辆。</p>
+<h4 id="section-23" tabindex="-1"><strong>二、功能描述</strong></h4>
+<p>用户能够按照简单明确的说明，对自行车进行日常使用前检查。</p>
+<p>主要检查内容：</p>
+<ol>
+<li>轮胎是否明显缺气或损坏。</li>
+<li>刹车是否正常响应。</li>
+<li>车把、车座是否存在异常松动。</li>
+<li>传动系统是否存在明显异常。</li>
+<li>照明和反光装置是否正常。</li>
+<li>发现异常时应明确停止使用及寻求维修的条件。</li>
+</ol>
+<h4 id="section-23" tabindex="-1"><strong>三、优先级</strong></h4>
+<p><strong>P0 — 必须完成</strong></p>
+<h4 id="section-23" tabindex="-1"><strong>四、输入/前置条件</strong></h4>
+<p><strong>输入：</strong></p>
+<ul>
+<li>用户的检查动作</li>
+<li>各个部位的实际状态</li>
+</ul>
+<p><strong>前置条件：</strong></p>
+<ul>
+<li>自行车处于安全的停止状态。</li>
+<li>用户能够查看基础检查说明。</li>
+</ul>
+<h4 id="section-23" tabindex="-1"><strong>五、处理流程</strong></h4>
+<ol>
+<li>用户准备骑行。</li>
+<li>用户按说明检查轮胎状态。</li>
+<li>用户检查刹车功能。</li>
+<li>用户检查主要固定部位是否存在异常。</li>
+<li>用户检查照明等必要设备。</li>
+<li>如果发现明显异常，用户停止使用并寻求维修。</li>
+<li>如果检查正常，用户开始骑行。</li>
+</ol>
+<h4 id="section-23" tabindex="-1"><strong>六、输出/后置条件</strong></h4>
+<p><strong>输出：</strong></p>
+<ul>
+<li>用户能够识别常见的明显异常。</li>
+<li>用户获得是否应该继续使用车辆的基本判断依据。</li>
+</ul>
+<p><strong>后置条件：</strong></p>
+<ul>
+<li>明显存在安全风险的车辆不会被错误地引导继续骑行。</li>
+</ul>
+<h4 id="section-23" tabindex="-1"><strong>七、补充说明</strong></h4>
+<p>日常自检不能替代专业维修、定期检查和适用的安全检测。</p>
+<p>对于制动失效、重要部件松动等问题，应明确要求停止骑行。</p>
+<h4 id="section-23" tabindex="-1"><strong>八、如何设计验证</strong></h4>
+<p><strong>测试编号：T013</strong></p>
+<p>测试步骤：</p>
+<ol>
+<li>向 5 名首次接触该产品的目标用户提供检查说明。</li>
+<li>让用户独立完成日常检查。</li>
+<li>设置安全的模拟异常识别任务。</li>
+<li>观察用户能否发现并正确处理问题。</li>
+<li>记录操作时间和错误。</li>
+</ol>
+<p>通过标准：</p>
+<ul>
+<li>所有用户能够找到检查说明。</li>
+<li>所有用户能够完成基本检查步骤。</li>
+<li>所有人都能够正确识别项目预设的关键安全异常。</li>
+<li>没有将明显不安全的情况判断为可以继续骑行。</li>
+</ul>
+<h3 id="function-f014" tabindex="-1"><strong>F014.FR001 自行车产品交付与使用指导功能</strong></h3>
+<h4 id="section-24" tabindex="-1"><strong>一、背景说明</strong></h4>
+<p>一辆已经完成生产的自行车，并不意味着用户能够立即正确使用。</p>
+<p>用户可能不知道如何调整车座、使用刹车、开启车灯以及进行基础检查。</p>
+<p>因此，需要将产品本身和必要的使用信息一起交付。</p>
+<h4 id="section-24" tabindex="-1"><strong>二、功能描述</strong></h4>
+<p>用户收到自行车后，应当能够理解并完成基本使用准备。</p>
+<p>具体要求：</p>
+<ol>
+<li>说明产品的适用范围。</li>
+<li>说明上车、骑行和停车方法。</li>
+<li>说明刹车操作方式。</li>
+<li>说明车座调整方式。</li>
+<li>说明照明、停车及锁车方法。</li>
+<li>说明基本自检与维护事项。</li>
+<li>明确不安全的使用行为和使用限制。</li>
+<li>明确必要的售后和维修途径。</li>
+</ol>
+<h4 id="section-24" tabindex="-1"><strong>三、优先级</strong></h4>
+<p><strong>P0 — 必须完成</strong></p>
+<h4 id="section-24" tabindex="-1"><strong>四、输入/前置条件</strong></h4>
+<p><strong>输入：</strong></p>
+<ul>
+<li>已完成交付检查的自行车</li>
+<li>产品使用说明</li>
+<li>用户的基本使用需求</li>
+</ul>
+<p><strong>前置条件：</strong></p>
+<ul>
+<li>车辆已经完成必要的装配与安全检查。</li>
+<li>必要配件及说明材料齐全。</li>
+</ul>
+<h4 id="section-24" tabindex="-1"><strong>五、处理流程</strong></h4>
+<ol>
+<li>用户收到自行车。</li>
+<li>用户检查产品及配件是否齐全。</li>
+<li>用户阅读基本安全说明。</li>
+<li>用户了解车辆的主要操作方式。</li>
+<li>用户按照说明调整适合自己的骑行姿势。</li>
+<li>用户完成骑行前检查。</li>
+<li>用户在安全场地进行初次试骑。</li>
+<li>用户确认没有异常后开始正式使用。</li>
+</ol>
+<h4 id="section-24" tabindex="-1"><strong>六、输出/后置条件</strong></h4>
+<p><strong>输出：</strong></p>
+<ul>
+<li>用户获得可正常使用的自行车及配套说明。</li>
+<li>用户了解主要操作方式和使用限制。</li>
+</ul>
+<p><strong>后置条件：</strong></p>
+<ul>
+<li>产品交付内容完整。</li>
+<li>用户知道如何获取后续维修支持。</li>
+</ul>
+<h4 id="section-24" tabindex="-1"><strong>七、补充说明</strong></h4>
+<p>使用说明不是对所有骑行风险的免责替代。</p>
+<p>产品自身必须先满足应有的安全要求，不能依赖说明书弥补设计或质量缺陷。</p>
+<h4 id="section-24" tabindex="-1"><strong>八、如何设计验证</strong></h4>
+<p><strong>测试编号：T014</strong></p>
+<p>测试步骤：</p>
+<ol>
+<li>邀请 5 名未提前接触该型号的目标用户。</li>
+<li>向其提供完整产品和使用材料。</li>
+<li>让用户完成开箱检查和基础使用准备。</li>
+<li>观察用户是否能够找到并理解重要安全说明。</li>
+<li>测试用户是否理解刹车、调整、自检等关键操作。</li>
+</ol>
+<p>通过标准：</p>
+<ul>
+<li>交付内容完整。</li>
+<li>所有用户能够找到关键安全说明。</li>
+<li>所有用户能够正确理解主要制动操作。</li>
+<li>用户能够完成基本骑行准备。</li>
+<li>关键操作没有普遍性的理解歧义。</li>
+</ul>
+</article><footer class="prd-footer"><a href="#document-start">回到文档开头 ↑</a></footer></main>
+<script>
+document.getElementById('prd-jump').addEventListener('change',event=>{
+  const target=document.getElementById(event.target.value);
+  if(target){
+    history.replaceState(null,'','#'+target.id);
+    const inset=document.querySelector('.prd-reader-nav').offsetHeight+16;
+    window.scrollTo({top:target.getBoundingClientRect().top+scrollY-inset,behavior:'instant'});
+    target.focus({preventScroll:true});
+  }
+});
+</script>
+</body></html>
