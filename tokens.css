@@ -1,4 +1,4 @@
-/* 严格采用用户指定的 17 项颜色角色，不另造色阶。 */
+/* 从 tokens.json 生成；基础角色依据用户提供的《设计系统基础变量.html》。 */
 :root {
   --color-primary: #20A0E0;
   --color-primary-deep: #0060A0;
@@ -37,42 +37,49 @@
   --semantic-focus: #0060A0;
   --semantic-disabled-bg: #E0E0E0;
   --semantic-disabled-text: #7A8A9A;
-  --font-body: -apple-system, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
-  --font-display: "鸿雷板书简体", "鸿雷小纸条青春体", "LXGW WenKai", "Kaiti SC", sans-serif;
-  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-  --font-size-caption: 12px;
-  --font-size-small: 14px;
+  --font-body: -apple-system,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;
+  --font-display: "鸿雷板书简体","鸿雷小纸条青春体","LXGW WenKai","Yuanti SC","Hiragino Sans GB",sans-serif;
+  --font-quote: "鸿雷小纸条青春体","LXGW WenKai","Kaiti SC","Xingkai SC",cursive;
+  --font-num: "SF Mono","JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --font-mono: "SF Mono","JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --font-size-hero: 48px;
+  --font-size-title: 24px;
   --font-size-body: 16px;
-  --font-size-lead: 18px;
+  --font-size-caption: 13px;
+  --font-size-quote: 24px;
+  --font-size-control: 14px;
+  --font-size-display: 48px;
+  --font-size-h1: 48px;
+  --font-size-h2: 24px;
   --font-size-h3: 24px;
-  --font-size-h2: 32px;
-  --font-size-h1: 44px;
-  --font-size-display: 64px;
+  --font-size-lead: 16px;
+  --font-size-small: 13px;
+  --font-size-number: 40px;
   --space-0: 0px;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 16px;
-  --space-5: 20px;
   --space-6: 24px;
   --space-8: 32px;
-  --space-10: 40px;
   --space-12: 48px;
   --space-16: 64px;
-  --space-20: 80px;
-  --space-24: 96px;
   --radius-none: 0px;
   --radius-xs: 4px;
-  --radius-sm: 8px;
+  --radius-sm: 12px;
   --radius-control: 10px;
+  --radius-image: 12px;
   --radius-card: 16px;
-  --radius-hero: 24px;
+  --radius-hero: 16px;
+  --radius-pill: 999px;
   --radius-full: 999px;
   --shadow-none: none;
-  --shadow-xs: 0 1px 3px rgba(42,58,74,.06);
+  --shadow-soft: 0 4px 16px rgba(32,160,224,.10);
+  --shadow-lift: 0 8px 24px rgba(32,160,224,.14);
+  --shadow-xs: 0 4px 16px rgba(32,160,224,.10);
   --shadow-sm: 0 4px 16px rgba(32,160,224,.10);
   --shadow-md: 0 8px 24px rgba(32,160,224,.14);
-  --shadow-lg: 0 20px 64px rgba(42,58,74,.18);
+  --shadow-lg: 0 8px 24px rgba(32,160,224,.14);
   --motion-fast: 160ms;
   --motion-base: 240ms;
   --motion-slow: 320ms;
@@ -94,4 +101,32 @@
   --component-border-width: 1px;
   --component-focus-width: 3px;
   --component-focus-offset: 3px;
+  --component-button-padding-x: 22px;
+  --component-button-padding-y: 10px;
+  --text-hero-size: 48px;
+  --text-hero-leading: 1.2;
+  --text-hero-weight: 500;
+  --text-hero-font: var(--font-display);
+  --text-title-size: 24px;
+  --text-title-leading: 1.4;
+  --text-title-weight: 500;
+  --text-title-font: var(--font-display);
+  --text-body-size: 16px;
+  --text-body-leading: 1.8;
+  --text-body-weight: 400;
+  --text-body-font: var(--font-body);
+  --text-caption-size: 13px;
+  --text-caption-leading: 1.6;
+  --text-caption-weight: 400;
+  --text-caption-font: var(--font-body);
+  --text-quote-size: 24px;
+  --text-quote-leading: 1.6;
+  --text-quote-weight: 400;
+  --text-quote-font: var(--font-quote);
 }
+.text-hero, .t-hero { font-family: var(--text-hero-font); font-size: var(--text-hero-size); line-height: var(--text-hero-leading); font-weight: var(--text-hero-weight); }
+.text-title, .t-title { font-family: var(--text-title-font); font-size: var(--text-title-size); line-height: var(--text-title-leading); font-weight: var(--text-title-weight); }
+.text-body, .t-body { font-family: var(--text-body-font); font-size: var(--text-body-size); line-height: var(--text-body-leading); font-weight: var(--text-body-weight); }
+.text-caption, .t-cap { font-family: var(--text-caption-font); font-size: var(--text-caption-size); line-height: var(--text-caption-leading); font-weight: var(--text-caption-weight); }
+.text-quote, .t-quote { font-family: var(--text-quote-font); font-size: var(--text-quote-size); line-height: var(--text-quote-leading); font-weight: var(--text-quote-weight); }
+.text-caption, .t-cap { color: var(--semantic-muted); }
