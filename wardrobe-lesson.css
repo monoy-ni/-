@@ -1,0 +1,115 @@
+/* 《今天怎么穿》网页阅读排版。界面样式只引用原设计系统变量。 */
+.course-page .rich .wardrobe-lesson {
+  max-width: var(--component-reading-width);
+  margin-top: var(--space-8);
+  font-size: var(--font-size-body);
+  line-height: 1.85;
+}
+.wardrobe-lesson p + p { margin-top: var(--space-4); }
+.course-page .rich .wardrobe-lesson .wardrobe-book-title {
+  margin: var(--space-3) 0;
+  font-size: var(--font-size-h2);
+  line-height: 1.4;
+}
+.wardrobe-subtitle { font-size: var(--font-size-lead); }
+.wardrobe-audience {
+  font-size: var(--font-size-small);
+  color: var(--semantic-link);
+}
+.wardrobe-cover { margin: var(--space-6) 0; }
+.wardrobe-cover img { max-height: 320px; }
+.wardrobe-lesson .wardrobe-map {
+  padding: var(--space-6);
+  margin: var(--space-8) 0 var(--space-12);
+  border: var(--component-border-width) solid var(--semantic-line);
+  border-radius: var(--radius-card);
+  background: var(--semantic-surface);
+}
+.course-page .rich .wardrobe-map h4 {
+  margin: 0 0 var(--space-3);
+  font-size: var(--font-size-lead);
+}
+.wardrobe-map > p { font-size: var(--font-size-small); }
+.wardrobe-map ol { margin: var(--space-5) 0 0; padding-left: var(--space-6); }
+.wardrobe-map li + li { margin-top: var(--space-4); }
+.wardrobe-map a { text-decoration: none; font-weight: 500; }
+.wardrobe-map a:hover { text-decoration: underline; }
+.wardrobe-map li p { margin-top: var(--space-1); font-size: var(--font-size-small); }
+.wardrobe-reading-section,
+.wardrobe-chapter { scroll-margin-top: var(--space-4); }
+.wardrobe-chapter,
+.wardrobe-reading-section + .wardrobe-reading-section {
+  padding-top: var(--space-8);
+  margin-top: var(--space-16);
+  border-top: var(--component-border-width) solid var(--semantic-line);
+}
+.course-page .rich .wardrobe-lesson h3 {
+  margin: 0 0 var(--space-4);
+  font-size: var(--font-size-h3);
+  line-height: 1.5;
+}
+.wardrobe-chapter-number {
+  display: block;
+  margin-bottom: var(--space-2);
+  font: 500 var(--font-size-caption)/1.5 var(--font-mono);
+  color: var(--semantic-link);
+}
+.wardrobe-entry { margin-top: var(--space-10); scroll-margin-top: var(--space-4); }
+.course-page .rich .wardrobe-entry h4 {
+  margin: 0 0 var(--space-4);
+  font-size: var(--font-size-lead);
+  line-height: 1.6;
+  font-weight: 600;
+}
+.wardrobe-lesson .wardrobe-figures {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin: var(--space-6) 0;
+  padding: var(--space-4);
+  border: var(--component-border-width) solid var(--semantic-line);
+  border-radius: var(--radius-card);
+  background: var(--semantic-surface);
+}
+.wardrobe-lesson .wardrobe-figures[data-count="1"] { grid-template-columns: 1fr; }
+.wardrobe-lesson .wardrobe-figures[data-count="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.wardrobe-lesson .wardrobe-figures img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+.wardrobe-lesson .wardrobe-figures[data-count="1"] img { max-height: 360px; }
+.wardrobe-lesson .wardrobe-note {
+  padding: var(--space-4) var(--space-5);
+  margin-top: var(--space-6);
+  border-left: var(--component-focus-width) solid var(--semantic-link);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--semantic-subtle);
+  font-size: var(--font-size-small);
+  line-height: 1.8;
+}
+.wardrobe-note strong { font-weight: 600; }
+.wardrobe-note p + p { margin-top: var(--space-2); }
+.wardrobe-exercise {
+  margin: var(--space-6) 0;
+  padding-left: var(--space-6);
+}
+.wardrobe-exercise li { padding: 0 0 var(--space-5) var(--space-2); }
+.wardrobe-exercise li + li { padding-top: var(--space-5); border-top: var(--component-border-width) solid var(--semantic-line); }
+.wardrobe-exercise strong { display: block; margin-bottom: var(--space-2); }
+.wardrobe-ending { margin-top: var(--space-6); font-weight: 500; }
+.course-page .anchor-nav .lesson-sub-link {
+  padding-left: var(--space-3);
+  border-left: var(--component-border-width) solid var(--semantic-line);
+  font-size: var(--font-size-caption);
+}
+@media (max-width: 599px) {
+  .wardrobe-lesson .wardrobe-figures,
+  .wardrobe-lesson .wardrobe-figures[data-count="3"] { grid-template-columns: 1fr; }
+  .wardrobe-lesson .wardrobe-figures img { max-height: 280px; }
+  .wardrobe-lesson .wardrobe-figures[data-count="1"] img { max-height: 320px; }
+  .wardrobe-lesson .wardrobe-map { padding: var(--space-5); }
+  .wardrobe-lesson .wardrobe-note { padding: var(--space-4); }
+}

@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light">
-<meta name="description" content="开学第一课：产品、开发、研究、设计。课程正文暂留空。">
+<meta name="description" content="开学第一课：产品、开发、研究、设计。开发板块收录《今天怎么穿》图文内容。">
 <title>产品 · 开学第一课</title><style>/* 严格采用用户指定的 17 项颜色角色，不另造色阶。 */
 :root {
   --color-primary: #20A0E0;
@@ -162,7 +162,7 @@ button.chip[aria-pressed=true]{color:var(--color-white);background:var(--color-p
 @media(max-width:599px){.course-page .lesson-main>h1{font-size:32px;max-width:none}.course-intro{font-size:16px}.course-page .site-header .site-links{display:none}.course-page .rich h2{font-size:24px}.course-example,.course-takeaway{padding:20px}.course-figure img{max-height:240px}.course-page .lesson-tools .btn{font-size:12px}.course-page .lesson-meta{gap:10px 16px}.course-page .site-header .brand{font-size:15px}}
 
 
-/* 开学第一课：仅维护用户提供的大纲，正文保持留空。 */
+/* 开学第一课大纲布局，正文内容在对应主题内扩展。 */
 .course-page .lesson-side .directory a{display:flex;align-items:center;gap:12px}.course-page .lesson-side .directory .number{font-size:12px;flex:none}
 .course-page .lesson-main>h1{font-size:44px;margin-top:16px}.course-page .lesson-meta{margin-top:16px;margin-bottom:20px}
 .course-page .rich>section{scroll-margin-top:112px;border-top:1px solid var(--color-april-gray);padding-top:28px}.course-page .rich>section:first-child{border-top:0;padding-top:0}.course-page .rich h2{font-size:22px;line-height:1.65;margin:20px 0 0;font-weight:500}
@@ -173,6 +173,7 @@ button.chip[aria-pressed=true]{color:var(--color-white);background:var(--color-p
 
 .course-page .directory summary .chapter-home-link{display:inline;padding:0;margin:0;background:transparent;border-radius:0;text-decoration:none;font:inherit;color:inherit}
 </style>
+<link rel="stylesheet" href="wardrobe-lesson.css">
 </head>
 <body class="template-body course-page" id="top">
 <a class="skip" href="#course-main">跳到课程正文</a>
@@ -187,6 +188,255 @@ button.chip[aria-pressed=true]{color:var(--color-white);background:var(--color-p
 <dialog id="page-directory" class="drawer" aria-labelledby="page-directory-title"><div class="dialog-inner"><div class="row between"><h2 id="page-directory-title">本页内容</h2><button class="btn quiet icon-btn" type="button" data-close-dialog aria-label="关闭本页内容"><span data-icon="close"></span></button></div><nav class="anchor-nav mt" id="mobile-toc" aria-label="移动端本页内容"><a href="#product-topic-1">1. 如何去做好调研，怎么样的才是一个好的调研？</a><a href="#product-topic-2">2. 如何设计一个产品的功能？什么是ROI价值最高的事情</a><a href="#product-topic-3">3. 如何去做好项目拆解？</a></nav></div></dialog>
 <dialog id="page-search" class="search-dialog" aria-labelledby="page-search-title"><div class="dialog-inner"><div class="row between"><h2 id="page-search-title">在这一页查找</h2><button class="btn quiet icon-btn" type="button" data-close-dialog aria-label="关闭查找"><span data-icon="close"></span></button></div><label class="sr-only" for="page-search-input">输入主题关键词</label><div class="control mt"><span data-icon="search"></span><input id="page-search-input" type="search" placeholder="输入主题关键词" autofocus></div><ul class="course-search-results" id="page-search-results"></ul><p id="search-message" class="caption" role="status"></p></div></dialog>
 <dialog id="course-notes" aria-labelledby="course-notes-title"><div class="dialog-inner"><div class="row between"><h2 id="course-notes-title">我的笔记</h2><button class="btn quiet icon-btn" type="button" data-close-dialog aria-label="关闭笔记"><span data-icon="close"></span></button></div><p class="small muted" id="note-topic">开学第一课 · 产品</p><div class="field mt"><label for="reader-note">记录</label><textarea id="reader-note" maxlength="600" placeholder="写下一条自己的记录" autofocus aria-describedby="note-error note-hint"></textarea><p id="note-error" class="error-text" role="alert"></p><p id="note-hint" class="hint">笔记只保存在当前浏览器。</p></div><div class="dialog-actions"><button class="btn outline" type="button" data-close-dialog>稍后再写</button><button class="btn primary" type="button" id="save-reader-note">保存笔记</button></div></div></dialog>
+<template id="frontend-course-body">
+<div class="wardrobe-lesson">
+<header>
+<p class="wardrobe-audience">给刚开始学搭配的你</p>
+<h3 class="wardrobe-book-title">今天怎么穿</h3>
+<p class="wardrobe-subtitle">把喜欢的衣服，穿成舒服的一身</p>
+<figure class="wardrobe-figures wardrobe-cover" data-count="1">
+<img src="assets/wardrobe/cover.png" width="360" height="250" alt="红外套、长裤和鞋放在一起；帽子、花围巾和装了书与水杯的包放在旁边。" loading="lazy" decoding="async">
+</figure>
+<p>跟着小林准备一次出门，再用自己衣柜里的衣服试一试。</p>
+</header>
+<nav class="wardrobe-map" aria-labelledby="wardrobe-map-title">
+<h4 id="wardrobe-map-title">从这五件小事开始</h4>
+<p>先跟着读一遍；也可以翻到自己正拿不准的那件事。</p>
+<ol>
+<li><a href="#development-topic-1-chapter-1">先想今天怎么过</a><p>去哪里、走多少路、带什么，都会影响这一身。</p></li>
+<li><a href="#development-topic-1-chapter-2">让这一身相处舒服</a><p>颜色、花纹和厚薄，要放在一起看。</p></li>
+<li><a href="#development-topic-1-chapter-3">穿上试一试，再决定</a><p>站着看之外，还要动一动、换一换。</p></li>
+<li><a href="#development-topic-1-chapter-4">让每件衣服互相帮忙</a><p>单件喜欢，也要看看整身是否方便。</p></li>
+<li><a href="#development-topic-1-chapter-5">穿脱、拿取都顺手</a><p>从扣上衣服到拿出钥匙，日常小动作值得照顾。</p></li>
+</ol>
+</nav>
+<div class="wardrobe-reading-section" id="development-topic-1-intro" data-lesson-nav="小林的一天">
+<h3 tabindex="-1">小林的一天</h3>
+<p>周六，小林准备和朋友逛书店。要走一段路，带书和水杯，傍晚才回家。衣柜里有许多喜欢的衣服，小林想搭一身，穿着开心，也方便过好这一天。</p>
+<figure class="wardrobe-figures " data-count="1">
+<img src="assets/wardrobe/wardrobe.png" width="360" height="230" alt="衣柜里挂着上衣和红外套，下面放着花围巾与黄帽子。" loading="lazy" decoding="async">
+</figure>
+<p>从今天怎么过开始，再看看颜色、花纹和厚薄怎么相处。穿上试一试，最后照顾到背包、穿脱和拿取这些小动作。</p>
+<p>书里的几种搭法，都可以用自己已有的衣服试。哪一身值得留下，要看你穿上后的感受。</p>
+</div>
+<div class="wardrobe-chapter" id="development-topic-1-chapter-1" data-lesson-nav="先想今天怎么过">
+<span class="wardrobe-chapter-number">一</span>
+<h3 tabindex="-1">先想今天怎么过</h3>
+<section class="wardrobe-entry" id="development-topic-1-lesson-11" data-lesson-search="先想今天去哪儿，再打开衣柜">
+<h4 tabindex="-1">先想今天去哪儿，再打开衣柜</h4>
+<p>周六，小林要和朋友逛书店。要走一段路，带书和水杯，傍晚才回家。</p>
+<p>把这几件事想清楚，选择就有了方向：鞋要能走路，包要装得下东西，衣服也要适合待上一整天。</p>
+<figure class="wardrobe-figures " data-count="1">
+<img src="assets/wardrobe/day.png" width="360" height="230" alt="要走一段路、和朋友逛书店、带书和水杯。" loading="lazy" decoding="async">
+</figure>
+<p>试着想一次真实出门：会坐多久、走多久、带什么？先从这些小事决定今天需要哪些衣服。</p>
+<div class="wardrobe-note"><p><strong>先想今天怎么过，再决定穿什么。</strong></p><p>试试看：想想今天最久的一段活动：这身衣服能陪你做完吗？</p></div>
+</section>
+<section class="wardrobe-entry" id="development-topic-1-lesson-12" data-lesson-search="同样的衣服，也要看谁来穿">
+<h4 tabindex="-1">同样的衣服，也要看谁来穿</h4>
+<p>同一件外套，小林穿着松快，朋友却觉得抬手有点紧。朋友很喜欢的厚围巾，小林戴久了又嫌热。</p>
+<figure class="wardrobe-figures " data-count="2">
+<img src="assets/wardrobe/different-fit-a.png" width="172" height="230" alt="小林穿着同一件外套，觉得松快。" loading="lazy" decoding="async">
+<img src="assets/wardrobe/different-fit-b.png" width="172" height="230" alt="朋友穿着同一件外套，抬手后还想调整。" loading="lazy" decoding="async">
+</figure>
+<p>小林不再只问“别人穿得好不好看”，也看自己的感受：会不会总想拉衣领、脱外套，或停下来调整。</p>
+<p>试试坐下、伸手和走动。哪种穿法让自己自在，穿过才知道。</p>
+<div class="wardrobe-note"><p><strong>别人的好看可以参考，自己的感受也要算进去。</strong></p><p>试试看：穿上以后，哪一处让你总想调整？换一种穿法再试。</p></div>
+</section>
+<section class="wardrobe-entry" id="development-topic-1-lesson-13" data-lesson-search="先拿出今天用得上的">
+<h4 tabindex="-1">先拿出今天用得上的</h4>
+<p>小林把几件候选衣服拿到一起：上衣、裤子、外套、鞋和包。没打算今天穿的，先留在衣柜里。</p>
+<figure class="wardrobe-figures " data-count="1">
+<img src="assets/wardrobe/candidates.png" width="360" height="230" alt="上衣、外套、长裤、鞋和包，放在一起作为今天的候选。" loading="lazy" decoding="async">
+</figure>
+<p>这样看一眼，就知道还缺哪一件，不用每次都从满衣柜里重新找。</p>
+<p>你也可以先挑两件候选上衣，和同一条裤子一起试。范围小一点，差别更容易看清。</p>
+<div class="wardrobe-note"><p><strong>先挑出候选，再慢慢组合。</strong></p><p>试试看：把候选放在一起，今天用得上的都在眼前了吗？</p></div>
+</section>
+</div>
+<div class="wardrobe-chapter" id="development-topic-1-chapter-2" data-lesson-nav="让这一身相处舒服">
+<span class="wardrobe-chapter-number">二</span>
+<h3 tabindex="-1">让这一身相处舒服</h3>
+<section class="wardrobe-entry" id="development-topic-1-lesson-21" data-lesson-search="今天，想让哪一件最先被看见？">
+<h4 tabindex="-1">今天，想让哪一件最先被看见？</h4>
+<p>红外套、花围巾和黄帽子一起穿上，小林每样都喜欢，却总在它们之间来回看。</p>
+<p>今天最想穿的是红外套。小林先取下帽子和花围巾，里面配简单的上衣，再看看整身。</p>
+<figure class="wardrobe-figures " data-count="2">
+<img src="assets/wardrobe/focus-a.png" width="172" height="230" alt="红外套、花围巾和黄帽子一起穿上。" loading="lazy" decoding="async">
+<img src="assets/wardrobe/focus-b.png" width="172" height="230" alt="取下帽子和花围巾，今天先选红外套。" loading="lazy" decoding="async">
+</figure>
+<p>这一次，红外套更显眼了。花围巾留到另一天，配朴素一点的衣服，也可以成为最想让人看见的那件。</p>
+<div class="wardrobe-note"><p><strong>先选一件最想穿的，再给它找合适的搭伴。</strong></p><p>试试看：站远一点看，第一眼注意到的是你最想穿的那件吗？</p></div>
+</section>
+<section class="wardrobe-entry" id="development-topic-1-lesson-22" data-lesson-search="颜色合不合，放在一起才看得出">
+<h4 tabindex="-1">颜色合不合，放在一起才看得出</h4>
+<p>小林先用深灰上衣配红外套，又只把上衣换成米白色。外套、裤子和鞋都没动，整身的感觉却变了。</p>
+<figure class="wardrobe-figures " data-count="2">
+<img src="assets/wardrobe/color-pair-a.png" width="172" height="230" alt="红外套配深灰上衣、深蓝长裤和布包。" loading="lazy" decoding="async">
+<img src="assets/wardrobe/color-pair-b.png" width="172" height="230" alt="其他衣服不动，只把上衣换成米白色。" loading="lazy" decoding="async">
+</figure>
+<p>小林这次更喜欢米白色，让整身显得轻快一些。下次想穿得沉静一点，也可能再选深灰。</p>
+<p>不用急着背“只能用几种颜色”。把两件衣服并排看，再穿上看，留意自己更喜欢哪一种。</p>
+<div class="wardrobe-note"><p><strong>先比较眼前的两种搭法，慢慢积累自己的感觉。</strong></p><p>试试看：其他衣服先不换，只换上衣，你更喜欢哪一身？</p></div>
+</section>
+<section class="wardrobe-entry" id="development-topic-1-lesson-23" data-lesson-search="花纹都很喜欢，也可以分开穿">
+<h4 tabindex="-1">花纹都很喜欢，也可以分开穿</h4>
+<p>小林很喜欢花围巾，试着把它配在条纹上衣外面。站远看，两种花纹都很明显，整身有点忙。</p>
+<figure class="wardrobe-figures " data-count="2">
+<img src="assets/wardrobe/patterns-a.png" width="172" height="230" alt="条纹上衣配花围巾，两种花纹都很明显。" loading="lazy" decoding="async">
+<img src="assets/wardrobe/patterns-b.png" width="172" height="230" alt="同一条花围巾配素色上衣。" loading="lazy" decoding="async">
+</figure>
+<p>换成没有花纹的上衣，围巾的颜色和图案就清楚多了。</p>
+<p>喜欢热闹的搭法也可以继续尝试。拿不准时，先留一个自己最想看的花纹，会更容易决定下一件。</p>
+<div class="wardrobe-note"><p><strong>图案多的时候，先试着让其中一件安静下来。</strong></p><p>试试看：退后几步看，留下的花纹是不是更容易看清了？</p></div>
+</section>
+<section class="wardrobe-entry" id="development-topic-1-lesson-24" data-lesson-search="厚薄和宽窄，也要一起试">
+<h4 tabindex="-1">厚薄和宽窄，也要一起试</h4>
+<p>小林把厚毛衣塞进一件偏窄的外套。镜子里看着还行，一抬手却觉得肩膀挤，袖口也堆成一团。</p>
+<figure class="wardrobe-figures " data-count="2">
+<img src="assets/wardrobe/thickness-a.png" width="172" height="230" alt="厚毛衣叠穿偏窄外套，袖口堆在一起。" loading="lazy" decoding="async">
+<img src="assets/wardrobe/thickness-b.png" width="172" height="230" alt="换薄一点的上衣，再抬手试一次。" loading="lazy" decoding="async">
+</figure>
+<p>换成薄一点的上衣，或改穿宽松一点的外套，衣领和袖口都好整理多了。</p>
+<p>里面和外面要一起试。只看每件衣服各自合不合身，还不足以知道叠着穿是否舒服。</p>
+<div class="wardrobe-note"><p><strong>把今天真的会一起穿的几件，放在一起试。</strong></p><p>试试看：叠着穿好再抬手，肩膀、衣领和袖口都舒服吗？</p></div>
+</section>
+</div>
+<div class="wardrobe-chapter" id="development-topic-1-chapter-3" data-lesson-nav="穿上试一试，再决定">
+<span class="wardrobe-chapter-number">三</span>
+<h3 tabindex="-1">穿上试一试，再决定</h3>
+<section class="wardrobe-entry" id="development-topic-1-lesson-31" data-lesson-search="别只站着照镜子">
+<h4 tabindex="-1">别只站着照镜子</h4>
+<p>小林以前总说想穿得“舒服一点”。这次穿好以后，真的坐下来、抬抬手、走几步，再伸手拿手机。</p>
+<figure class="wardrobe-figures " data-count="4">
+<img src="assets/wardrobe/try-a.png" width="180" height="115" alt="坐下来：肚子会不会被勒住？" loading="lazy" decoding="async">
+<img src="assets/wardrobe/try-b.png" width="180" height="115" alt="抬抬手：肩膀紧不紧？" loading="lazy" decoding="async">
+<img src="assets/wardrobe/try-c.png" width="180" height="115" alt="走几步：会不会总想整理？" loading="lazy" decoding="async">
+<img src="assets/wardrobe/try-d.png" width="180" height="115" alt="拿手机：伸手拿，顺不顺手？" loading="lazy" decoding="async">
+</figure>
+<p>坐下时肚子不被勒住，抬手时肩膀不紧，走路不用一直整理衣服，拿东西也顺手。</p>
+<p>这些感受比一句“还不错”具体。下一次挑衣服，小林就更知道要留意哪里。</p>
+<div class="wardrobe-note"><p><strong>把“舒服”说到能亲自试出来的小地方。</strong></p><p>试试看：挑一个今天真的会做的动作，穿着这一身做一遍。</p></div>
+</section>
+<section class="wardrobe-entry" id="development-topic-1-lesson-32" data-lesson-search="拿不准，就先只换一件">
+<h4 tabindex="-1">拿不准，就先只换一件</h4>
+<p>小林对这一身有点拿不准，差点把外套、鞋和包一起换掉。后来先留下其他衣服，只换了一双鞋。</p>
+<figure class="wardrobe-figures " data-count="2">
+<img src="assets/wardrobe/one-change-a.png" width="172" height="230" alt="这一身配原来的鞋。" loading="lazy" decoding="async">
+<img src="assets/wardrobe/one-change-b.png" width="172" height="230" alt="其他衣服不动，只换一双鞋。" loading="lazy" decoding="async">
+</figure>
+<p>再看镜子，就容易发现这双鞋带来了什么变化。要是不喜欢，换回原来那双也很轻松。</p>
+<p>每次先动一处。看清差别以后，再决定要不要继续换下一件。</p>
+<div class="wardrobe-note"><p><strong>少改一点，才容易知道哪一步更合心意。</strong></p><p>试试看：换过以后，具体是哪一点更喜欢，或更不喜欢了？</p></div>
+</section>
+<section class="wardrobe-entry" id="development-topic-1-lesson-33" data-lesson-search="暂时拿开的，先别收得太远">
+<h4 tabindex="-1">暂时拿开的，先别收得太远</h4>
+<p>试穿时，小林把暂时不选的上衣挂在旁边。换过两件之后，又觉得最开始那件更适合红外套。</p>
+<figure class="wardrobe-figures " data-count="1">
+<img src="assets/wardrobe/keep-nearby.png" width="360" height="230" alt="暂时不选的上衣挂在旁边，想换回时还找得到。" loading="lazy" decoding="async">
+</figure>
+<p>它还在眼前，随手就能换回来。不用重新翻衣柜，也不怕忘记刚才是哪件。</p>
+<p>如果试的组合比较多，可以拍张照片，再继续试下一身。</p>
+<div class="wardrobe-note"><p><strong>留一点回头比较的余地，不必一次就选定。</strong></p><p>试试看：想回头再试时，刚才那件还能马上拿到吗？</p></div>
+</section>
+</div>
+<div class="wardrobe-chapter" id="development-topic-1-chapter-4" data-lesson-nav="让每件衣服互相帮忙">
+<span class="wardrobe-chapter-number">四</span>
+<h3 tabindex="-1">让每件衣服互相帮忙</h3>
+<section class="wardrobe-entry" id="development-topic-1-lesson-41" data-lesson-search="喜欢的那一身，也要帮你过好今天">
+<h4 tabindex="-1">喜欢的那一身，也要帮你过好今天</h4>
+<p>红外套是小林今天最想穿的颜色，出门时也能挡一点风。长裤方便坐下，鞋子适合走路，包里放书和水杯。</p>
+<figure class="wardrobe-figures " data-count="1">
+<img src="assets/wardrobe/whole-outfit.png" width="360" height="230" alt="外套挡一点风，长裤坐下自在，鞋陪你走路，包放书和水杯。" loading="lazy" decoding="async">
+</figure>
+<p>一件衣服可以有好几个用处。把整身放在一起想，才看得出今天的需要有没有被照顾到。</p>
+<p>如果为了拎一个好看的小包，书和水杯只能一直拿在手里，小林就会再想想要不要换。</p>
+<div class="wardrobe-note"><p><strong>看整身时，也问问今天要做的事方不方便。</strong></p><p>试试看：想一遍今天的活动，还有哪件事做起来不方便？</p></div>
+</section>
+<section class="wardrobe-entry" id="development-topic-1-lesson-42" data-lesson-search="单件都合适，穿在一起还要再看">
+<h4 tabindex="-1">单件都合适，穿在一起还要再看</h4>
+<p>围巾系好了，包也背上了，小林才发现：围巾的一端被肩带压住，想摘下来有点费劲。</p>
+<figure class="wardrobe-figures " data-count="2">
+<img src="assets/wardrobe/work-together-a.png" width="172" height="230" alt="围巾的一端压在包的肩带下面，想摘下时会卡住。" loading="lazy" decoding="async">
+<img src="assets/wardrobe/work-together-b.png" width="172" height="230" alt="收好围巾，再背包，解围巾和取包都试试。" loading="lazy" decoding="async">
+</figure>
+<p>把围巾收好一点，再调整肩带的位置，拿包和解围巾都顺手了。</p>
+<p>穿好外套再背包，系好围巾再活动。让几件东西真的一起待一会儿，容易发现它们会不会互相绊住。</p>
+<div class="wardrobe-note"><p><strong>单件试过以后，别忘了把整套一起试。</strong></p><p>试试看：背好包以后，围巾还能轻松解开、外套还能整理吗？</p></div>
+</section>
+<section class="wardrobe-entry" id="development-topic-1-lesson-43" data-lesson-search="好看的包，也要装得下今天">
+<h4 tabindex="-1">好看的包，也要装得下今天</h4>
+<p>小林把书往绿小包里放，拉链合不上；水杯又只能拿在手里。还没出门，两只手就快占满了。</p>
+<figure class="wardrobe-figures " data-count="2">
+<img src="assets/wardrobe/bag-a.png" width="172" height="230" alt="绿小包装不下书，水杯还要用手拿。" loading="lazy" decoding="async">
+<img src="assets/wardrobe/bag-b.png" width="172" height="230" alt="换成布包，书和水杯都带得走。" loading="lazy" decoding="async">
+</figure>
+<p>换成布包，书和水杯都有地方放了。背到这一身旁边看看，颜色和大小也合适。</p>
+<p>先把今天真的要带的东西装进去，再决定用哪个包。</p>
+<div class="wardrobe-note"><p><strong>别只看空包的样子，带上东西再试试。</strong></p><p>试试看：装好书和水杯后，还能轻松合上、拿起包吗？</p></div>
+</section>
+</div>
+<div class="wardrobe-chapter" id="development-topic-1-chapter-5" data-lesson-nav="穿脱、拿取都顺手">
+<span class="wardrobe-chapter-number">五</span>
+<h3 tabindex="-1">穿脱、拿取都顺手</h3>
+<section class="wardrobe-entry" id="development-topic-1-lesson-51" data-lesson-search="穿得上，也要穿脱方便">
+<h4 tabindex="-1">穿得上，也要穿脱方便</h4>
+<p>小林试了一件上衣，穿好后挺喜欢，可脱下时总要拽住领口。另一件开襟上衣，穿脱就省事一些。</p>
+<figure class="wardrobe-figures " data-count="3">
+<img src="assets/wardrobe/fastenings-a.png" width="120" height="230" alt="套头：领口好穿脱吗？" loading="lazy" decoding="async">
+<img src="assets/wardrobe/fastenings-b.png" width="120" height="230" alt="纽扣：自己能扣好吗？" loading="lazy" decoding="async">
+<img src="assets/wardrobe/fastenings-c.png" width="120" height="230" alt="拉链：拉开合上顺吗？" loading="lazy" decoding="async">
+</figure>
+<p>套头、纽扣、拉链，用起来各有不同。试衣时也把扣好、拉开和脱下这几步走一遍。</p>
+<p>如果今天会频繁进出室内外，还可以想想：坐下、背着包时，哪种穿法更好整理。</p>
+<div class="wardrobe-note"><p><strong>把穿上和脱下都试过，再判断合不合适。</strong></p><p>试试看：自己穿上，再脱下来，哪一步还会卡住或费劲？</p></div>
+</section>
+<section class="wardrobe-entry" id="development-topic-1-lesson-52" data-lesson-search="手机和钥匙，放在顺手的位置">
+<h4 tabindex="-1">手机和钥匙，放在顺手的位置</h4>
+<p>手机、钥匙都在包里，可每次要用，小林都得把书和水杯翻一遍。东西带齐了，拿起来却不方便。</p>
+<figure class="wardrobe-figures " data-count="2">
+<img src="assets/wardrobe/easy-reach-a.png" width="172" height="230" alt="手机和钥匙混在书与水杯之间，每次都要翻找。" loading="lazy" decoding="async">
+<img src="assets/wardrobe/easy-reach-b.png" width="172" height="230" alt="把常用的小东西放在固定位置，背好后伸手拿一次。" loading="lazy" decoding="async">
+</figure>
+<p>小林把常用的小东西放到固定位置，再背好包，伸手试着拿一次。坐下后，也试试会不会压着、不好取。</p>
+<p>放得顺手，还要留意东西会不会滑出来。</p>
+<div class="wardrobe-note"><p><strong>按自己真的会用到的动作，试一次拿取。</strong></p><p>试试看：站着、坐着各拿一次，顺手吗？东西放得稳吗？</p></div>
+</section>
+<section class="wardrobe-entry" id="development-topic-1-lesson-53" data-lesson-search="背好包，走上几步再出门">
+<h4 tabindex="-1">背好包，走上几步再出门</h4>
+<p>装好东西后，小林先拎着包走了走，又换成背着试。重量、肩带位置和衣服会不会被带着跑，都感受了一遍。</p>
+<figure class="wardrobe-figures " data-count="2">
+<img src="assets/wardrobe/carry-a.png" width="172" height="230" alt="装好东西的包，拎着试试，手会不会累？" loading="lazy" decoding="async">
+<img src="assets/wardrobe/carry-b.png" width="172" height="230" alt="背起来试试，抬手会不会受影响？" loading="lazy" decoding="async">
+</figure>
+<p>拎着要不要总换手？背着会不会妨碍抬手？哪一种更适合今天的路，试过以后再选。</p>
+<p>站在镜子前合适的一身，也要能陪自己走进今天的生活。</p>
+<div class="wardrobe-note"><p><strong>穿好、装好、背好，再一起动一动。</strong></p><p>试试看：带齐东西走一小段，是否总要调整肩带或换手？</p></div>
+</section>
+</div>
+<div class="wardrobe-chapter wardrobe-reading-section" id="development-topic-1-final" data-lesson-nav="准备好了">
+<h3 tabindex="-1">准备好了</h3>
+<p>最后，小林留下红外套、米白上衣、深蓝长裤和常穿的鞋，把书与水杯装进布包。临出门想起可能下雨，又多放了一把折伞。</p>
+<figure class="wardrobe-figures " data-count="1">
+<img src="assets/wardrobe/final.png" width="360" height="230" alt="红外套、米白上衣、深蓝长裤和常穿的鞋，布包带上书、水杯和折伞。" loading="lazy" decoding="async">
+</figure>
+<p>红外套还是今天最喜欢的那件；鞋能走路，东西带得齐，也拿得顺手。花围巾和黄帽子，留到下次再找搭伴。</p>
+<div class="wardrobe-note"><p><strong>有自己喜欢的样子，也照顾到了今天的生活。</strong></p></div>
+</div>
+<div class="wardrobe-chapter wardrobe-reading-section" id="development-topic-1-practice" data-lesson-nav="轮到你的衣柜">
+<h3 tabindex="-1">轮到你的衣柜</h3>
+<p>找一件现在想穿的衣服，为下一次出门搭一身。</p>
+<ol class="wardrobe-exercise">
+<li><strong>想一次出门</strong>会去哪里，走多久，坐多久，带什么？</li>
+<li><strong>拿出一件喜欢的衣服</strong>再找几件放在旁边，看看怎样组合。</li>
+<li><strong>一次先换一件</strong>比较两种搭法，留意自己喜欢哪里。</li>
+<li><strong>穿好以后动一动</strong>坐下、抬手、走路，背上今天的包。</li>
+<li><strong>留下一点感受</strong>哪件想再穿一次？哪一步还想调整？</li>
+</ol>
+<p class="wardrobe-ending">慢慢试，留下让自己愿意再穿一次的搭法。</p>
+</div>
+</div>
+</template>
 <div class="toast-region" aria-label="操作通知"></div>
 <script>/* Shared, dependency-free components. Works with local HTML and a static server. */
 (() => {
@@ -260,11 +510,55 @@ button.chip[aria-pressed=true]{color:var(--color-white);background:var(--color-p
   const key=(type)=>'opening-class:'+active.id+':'+type;
   function icons(root=document){root.querySelectorAll('[data-icon]').forEach(el=>el.innerHTML=D.icon(el.dataset.icon));}
   function syncBookmark(){const on=D.storage.get(key('bookmark'),false);bookmark.setAttribute('aria-pressed',String(on));bookmark.innerHTML=D.icon('bookmark')+'<span>'+(on?'已收藏':'收藏这页')+'</span>';}
-  function headingLinks(){return active.topics.map((t,i)=>'<a href="#'+active.id+'-topic-'+(i+1)+'">'+(i+1)+'. '+D.escape(t)+'</a>').join('');}
-  function find(){const q=search.value.trim(),matches=active.topics.map((text,i)=>({text,i})).filter(x=>x.text.includes(q));document.getElementById('page-search-results').innerHTML=matches.map(x=>'<li><a href="#'+active.id+'-topic-'+(x.i+1)+'">'+(x.i+1)+'. '+D.escape(x.text)+'</a></li>').join('');document.getElementById('search-message').textContent=matches.length?matches.length+' 个相关主题':'没有找到，试试更短的关键词。';}
-  function highlight(){let current=active.id+'-topic-1';content.querySelectorAll('section').forEach(s=>{if(s.getBoundingClientRect().top<180)current=s.id});if(location.hash.startsWith('#'+active.id+'-topic-'))current=location.hash.slice(1);document.querySelectorAll('#desktop-toc a,#mobile-toc a').forEach(a=>{const on=a.hash==='#'+current;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}
-  function render(course){active=course;index=COURSES.findIndex(c=>c.id===course.id);document.title=course.title+' · 开学第一课';document.getElementById('course-title').textContent=course.title;document.getElementById('breadcrumb-topic').textContent=course.title;document.getElementById('course-label').textContent='开学第一课 · '+course.number;document.getElementById('course-number').textContent=course.number+' / '+course.title;document.getElementById('outline-count').textContent=course.topics.length+' 个主题';content.innerHTML=course.topics.map((t,i)=>'<section id="'+course.id+'-topic-'+(i+1)+'"><h2 tabindex="-1"><span class="topic-number">'+(i+1)+'.</span>'+D.escape(t)+'</h2><div class="course-body-slot" aria-label="正文留空"></div></section>').join('');document.getElementById('desktop-toc').innerHTML=headingLinks();document.getElementById('mobile-toc').innerHTML=headingLinks();document.querySelectorAll('[data-course]').forEach(a=>{if(a.dataset.course===course.id)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});document.getElementById('course-prev').innerHTML=index===0?'<small>返回</small>课程目录':'<small>上一节</small>'+D.icon('left')+' '+COURSES[index-1].number+' '+COURSES[index-1].title;document.getElementById('course-next').innerHTML=index===COURSES.length-1?'<small>返回</small>本章目录':'<small>下一节</small>'+COURSES[index+1].number+' '+COURSES[index+1].title+' '+D.icon('right');document.getElementById('note-topic').textContent='开学第一课 · '+course.title;note.value=D.storage.get(key('note'),'');document.getElementById('note-error').textContent='';syncBookmark();search.value='';find();highlight();}
-  function route(){const raw=decodeURIComponent(location.hash.slice(1)),id=raw.split('-topic-')[0];const chosen=COURSES.find(c=>c.id===id)||active;const changed=chosen.id!==active.id;if(changed)render(chosen);if(raw.includes('-topic-')){requestAnimationFrame(()=>{const target=document.getElementById(raw);target?.scrollIntoView({block:'start'});target?.querySelector('h2')?.focus({preventScroll:true});highlight();});}else if(COURSES.some(c=>c.id===raw)){window.scrollTo({top:0,behavior:'instant'});highlight();}}
+  function headingRecords(){
+    return active.topics.flatMap((text,i)=>{
+      const id=active.id+'-topic-'+(i+1),host=document.getElementById(id);
+      return [{id,text:(i+1)+'. '+text,sub:false},...[...(host?.querySelectorAll('[data-lesson-nav]')||[])].map(el=>({id:el.id,text:el.dataset.lessonNav,sub:true}))];
+    });
+  }
+  function headingLinks(){
+    return headingRecords().map(item=>'<a href="#'+item.id+'"'+(item.sub?' class="lesson-sub-link"':'')+'>'+D.escape(item.text)+'</a>').join('');
+  }
+  function find(){
+    const q=search.value.trim().toLowerCase(),records=headingRecords().map(item=>({...item,search:item.text}));
+    if(q)content.querySelectorAll('[data-lesson-search]').forEach(el=>records.push({id:el.id,text:el.dataset.lessonSearch,search:el.textContent}));
+    const matches=records.filter(item=>item.search.toLowerCase().includes(q));
+    document.getElementById('page-search-results').innerHTML=matches.map(item=>'<li><a href="#'+item.id+'">'+D.escape(item.text)+'</a></li>').join('');
+    document.getElementById('search-message').textContent=matches.length?matches.length+' 个相关内容':'没有找到，试试更短的关键词。';
+  }
+  function highlight(){
+    let current=active.id+'-topic-1';
+    headingRecords().forEach(item=>{const el=document.getElementById(item.id);if(el&&el.getBoundingClientRect().top<180)current=item.id;});
+    document.querySelectorAll('#desktop-toc a,#mobile-toc a').forEach(a=>{
+      const on=a.hash==='#'+current;a.classList.toggle('active',on);
+      if(on)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');
+    });
+  }
+  function render(course){
+    active=course;index=COURSES.findIndex(c=>c.id===course.id);
+    document.title=course.title+' · 开学第一课';
+    document.getElementById('course-title').textContent=course.title;
+    document.getElementById('breadcrumb-topic').textContent=course.title;
+    document.getElementById('course-label').textContent='开学第一课 · '+course.number;
+    document.getElementById('course-number').textContent=course.number+' / '+course.title;
+    document.getElementById('outline-count').textContent=course.topics.length+' 个主题';
+    content.innerHTML=course.topics.map((t,i)=>{
+      const body=course.id==='development'&&i===0?document.getElementById('frontend-course-body').innerHTML:'<div class="course-body-slot" aria-label="正文留空"></div>';
+      return '<section id="'+course.id+'-topic-'+(i+1)+'"><h2 tabindex="-1"><span class="topic-number">'+(i+1)+'.</span>'+D.escape(t)+'</h2>'+body+'</section>';
+    }).join('');
+    document.getElementById('desktop-toc').innerHTML=headingLinks();
+    document.getElementById('mobile-toc').innerHTML=headingLinks();
+    document.querySelectorAll('[data-course]').forEach(a=>{
+      if(a.dataset.course===course.id)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+    });
+    document.getElementById('course-prev').innerHTML=index===0?'<small>返回</small>课程目录':'<small>上一节</small>'+D.icon('left')+' '+COURSES[index-1].number+' '+COURSES[index-1].title;
+    document.getElementById('course-next').innerHTML=index===COURSES.length-1?'<small>返回</small>本章目录':'<small>下一节</small>'+COURSES[index+1].number+' '+COURSES[index+1].title+' '+D.icon('right');
+    document.getElementById('note-topic').textContent='开学第一课 · '+course.title;
+    note.value=D.storage.get(key('note'),'');
+    document.getElementById('note-error').textContent='';
+    syncBookmark();search.value='';find();highlight();
+  }
+  function route(){const raw=decodeURIComponent(location.hash.slice(1)),id=raw.split('-topic-')[0];const chosen=COURSES.find(c=>c.id===id)||active;const changed=chosen.id!==active.id;if(changed)render(chosen);if(raw.includes('-topic-')){requestAnimationFrame(()=>{const target=document.getElementById(raw);target?.scrollIntoView({block:'start'});target?.querySelector('h2,h3,h4')?.focus({preventScroll:true});highlight();});}else if(COURSES.some(c=>c.id===raw)){window.scrollTo({top:0,behavior:'instant'});highlight();}}
   document.getElementById('course-prev').addEventListener('click',()=>{if(index===0)location.href='开学第一课.html';else location.hash=COURSES[index-1].id;});
   document.getElementById('course-next').addEventListener('click',()=>{if(index===COURSES.length-1)location.href='开学第一课.html';else location.hash=COURSES[index+1].id;});
   bookmark.addEventListener('click',()=>{D.storage.set(key('bookmark'),bookmark.getAttribute('aria-pressed')!=='true');syncBookmark();});
