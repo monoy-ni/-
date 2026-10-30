@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#20A0E0"/></marker>
+  </defs>
+  <rect width="640" height="300" fill="#FDFCFA"/>
+  <text x="160" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#2A3A4A">一直转，直到办完</text>
+
+  <path d="M188 92 A92 92 0 0 1 238 224" fill="none" stroke="#20A0E0" stroke-width="3" marker-end="url(#a)"/>
+  <path d="M206 248 A92 92 0 0 1 96 220" fill="none" stroke="#20A0E0" stroke-width="3" marker-end="url(#a)"/>
+  <path d="M82 190 A92 92 0 0 1 130 86" fill="none" stroke="#20A0E0" stroke-width="3" marker-end="url(#a)"/>
+
+  <rect x="120" y="58" width="80" height="44" rx="22" fill="#20A0E0"/>
+  <text x="160" y="86" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFFFF">想</text>
+  <rect x="210" y="200" width="80" height="44" rx="22" fill="#FFFFFF" stroke="#20A0E0" stroke-width="2"/>
+  <text x="250" y="228" text-anchor="middle" font-size="17" font-weight="700" fill="#0060A0">做</text>
+  <rect x="30" y="200" width="80" height="44" rx="22" fill="#FFFFFF" stroke="#20A0E0" stroke-width="2"/>
+  <text x="70" y="228" text-anchor="middle" font-size="17" font-weight="700" fill="#0060A0">看结果</text>
+
+  <rect x="330" y="56" width="286" height="220" rx="16" fill="#FFFFFF" stroke="#E0E0E0"/>
+  <text x="352" y="88" font-size="15" font-weight="700" fill="#2A3A4A">订蛋糕的时候</text>
+  <text x="352" y="122" font-size="14" fill="#0060A0">想</text><text x="398" y="122" font-size="14" fill="#2A3A4A">去 A 店订一个</text>
+  <text x="352" y="150" font-size="14" fill="#0060A0">做</text><text x="398" y="150" font-size="14" fill="#2A3A4A">打开 A 店下单</text>
+  <text x="352" y="178" font-size="14" fill="#0060A0">看结果</text><text x="398" y="178" font-size="14" fill="#C21F26">A 店今天关门了</text>
+  <line x1="352" y1="196" x2="594" y2="196" stroke="#E0E0E0"/>
+  <text x="352" y="224" font-size="14" fill="#0060A0">再想</text><text x="398" y="224" font-size="14" fill="#2A3A4A">那就换 B 店</text>
+  <text x="352" y="252" font-size="14" fill="#0060A0">再做</text><text x="398" y="252" font-size="14" fill="#4A8B3B">B 店下单成功</text>
+</svg>

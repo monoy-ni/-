@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif">
+  <rect width="640" height="300" fill="#FDFCFA"/>
+  <text x="320" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#2A3A4A">一个够用，就别找三个</text>
+
+  <rect x="24" y="60" width="200" height="216" rx="16" fill="#FFFFFF" stroke="#20A0E0" stroke-width="2"/>
+  <text x="124" y="94" text-anchor="middle" font-size="17" font-weight="700" fill="#0060A0">1 个 agent</text>
+  <circle cx="124" cy="140" r="24" fill="#20A0E0"/>
+  <text x="124" y="146" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">A</text>
+  <text x="124" y="200" text-anchor="middle" font-size="14" fill="#2A3A4A">订了 1 个蛋糕</text>
+  <text x="124" y="226" text-anchor="middle" font-size="14" fill="#4A8B3B">花 168 元</text>
+
+  <rect x="248" y="60" width="368" height="216" rx="16" fill="#FFFFFF" stroke="#E0E0E0"/>
+  <text x="432" y="94" text-anchor="middle" font-size="17" font-weight="700" fill="#7A8A9A">3 个 agent</text>
+  <circle cx="320" cy="150" r="24" fill="#EAF4FB" stroke="#20A0E0"/>
+  <text x="320" y="156" text-anchor="middle" font-size="15" font-weight="700" fill="#0060A0">A</text>
+  <circle cx="432" cy="128" r="24" fill="#EAF4FB" stroke="#20A0E0"/>
+  <text x="432" y="134" text-anchor="middle" font-size="15" font-weight="700" fill="#0060A0">B</text>
+  <circle cx="544" cy="150" r="24" fill="#EAF4FB" stroke="#20A0E0"/>
+  <text x="544" y="156" text-anchor="middle" font-size="15" font-weight="700" fill="#0060A0">C</text>
+  <line x1="344" y1="144" x2="408" y2="132" stroke="#7A8A9A" stroke-dasharray="4 4"/>
+  <line x1="456" y1="132" x2="520" y2="144" stroke="#7A8A9A" stroke-dasharray="4 4"/>
+  <line x1="344" y1="156" x2="520" y2="156" stroke="#7A8A9A" stroke-dasharray="4 4"/>
+  <text x="432" y="182" text-anchor="middle" font-size="12" fill="#7A8A9A">互相传话，每传一次都要花钱</text>
+  <text x="432" y="222" text-anchor="middle" font-size="14" fill="#2A3A4A">A 和 C 都去订了蛋糕</text>
+  <text x="432" y="248" text-anchor="middle" font-size="14" fill="#C21F26">订重了，花了 2 倍还多</text>
+</svg>

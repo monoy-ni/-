@@ -1,7 +1,7 @@
 {
   "kind": "逻辑和源文件检查",
-  "total": 34,
-  "passed": 34,
+  "total": 44,
+  "passed": 44,
   "checks": [
     {
       "name": "system.js 语法",
@@ -100,6 +100,46 @@
       "pass": true
     },
     {
+      "name": "基础变量原文的四级文字与金句参数",
+      "pass": true
+    },
+    {
+      "name": "兼容名称只引用基础角色，避免数值副本漂移",
+      "pass": true
+    },
+    {
+      "name": "金句与数字字体均有独立职责",
+      "pass": true
+    },
+    {
+      "name": "间距档位与参考文件列出的推导刻度一致",
+      "pass": true
+    },
+    {
+      "name": "图片、卡片、按钮圆角及两种蓝色阴影符合原值",
+      "pass": true
+    },
+    {
+      "name": "index.html 使用同一份共享样式且无变量副本",
+      "pass": true
+    },
+    {
+      "name": "templates.html 使用同一份共享样式且无变量副本",
+      "pass": true
+    },
+    {
+      "name": "课程内容页.html 使用同一份共享样式且无变量副本",
+      "pass": true
+    },
+    {
+      "name": "开学第一课.html 使用同一份共享样式且无变量副本",
+      "pass": true
+    },
+    {
+      "name": "规范样张读取变量而不再保留旧字号表",
+      "pass": true
+    },
+    {
       "name": "JSON 与 CSS 变量源同步",
       "pass": true
     },
@@ -128,7 +168,7 @@
       "pass": true
     },
     {
-      "name": "CSS 所用变量全部有定义",
+      "name": "所有页面样式所用变量全部有定义",
       "pass": true
     },
     {

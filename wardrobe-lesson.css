@@ -1,0 +1,35 @@
+/* Reader composition only. Typography, colors and shape values come from tokens.css. */
+.wardrobe-lesson{max-width:var(--component-reading-width);margin-top:var(--space-8);font-family:var(--text-body-font);font-size:var(--text-body-size);line-height:var(--text-body-leading);font-weight:var(--text-body-weight);color:var(--semantic-text)}
+.wardrobe-lesson p+p{margin-top:var(--space-4)}
+.rich .wardrobe-lesson h3{margin:0 0 var(--space-4);font-family:var(--text-title-font);font-size:var(--text-title-size);line-height:var(--text-title-leading);font-weight:var(--text-title-weight)}
+.rich .wardrobe-lesson h4{margin:0 0 var(--space-4);font-family:var(--font-body);font-size:var(--text-body-size);line-height:var(--text-body-leading);font-weight:500;color:var(--semantic-link)}
+.wardrobe-audience{margin-bottom:var(--space-3)}
+.wardrobe-example p+p{margin-top:var(--space-2)}
+.wardrobe-context,.wardrobe-map>p,.wardrobe-map li p{font-family:var(--text-caption-font);font-size:var(--text-caption-size);line-height:var(--text-caption-leading);font-weight:var(--text-caption-weight);color:var(--semantic-muted)}
+.wardrobe-subtitle{margin-top:var(--space-3)}
+.wardrobe-map{margin:var(--space-12) 0 var(--space-16);padding:var(--space-6) 0;border-top:1px solid var(--semantic-line);border-bottom:1px solid var(--semantic-line)}
+.wardrobe-map ol{margin:var(--space-6) 0 0;padding-left:var(--space-6)}
+.wardrobe-map li+li{margin-top:var(--space-6)}
+.wardrobe-map li::marker,.wardrobe-exercise li::marker{font-family:var(--font-num);color:var(--semantic-link)}
+.wardrobe-map a{color:var(--semantic-link);text-decoration:none;font-weight:500}
+.wardrobe-map a:hover{text-decoration:underline}
+.wardrobe-map li p{margin-top:var(--space-2)}
+.wardrobe-reading-section,.wardrobe-chapter,.wardrobe-entry{scroll-margin-top:var(--space-4)}
+.wardrobe-chapter,.wardrobe-reading-section+.wardrobe-reading-section{margin-top:var(--space-16);padding-top:var(--space-8);border-top:1px solid var(--semantic-line)}
+.wardrobe-chapter-number{display:block;margin:0 0 var(--space-3);font:400 var(--text-caption-size)/var(--text-caption-leading) var(--font-num);color:var(--semantic-link)}
+.wardrobe-entry{margin-top:var(--space-12)}
+.wardrobe-figures{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4);margin:var(--space-8) 0}
+.wardrobe-figures[data-count="1"]{grid-template-columns:1fr}
+.wardrobe-figures[data-count="3"]{grid-template-columns:repeat(3,minmax(0,1fr))}
+.wardrobe-figures img{width:100%;height:auto;max-height:320px;object-fit:contain;border-radius:var(--radius-image)}
+.wardrobe-note{margin:var(--space-8) 0;padding:var(--space-4);border-radius:var(--radius-card);background:var(--semantic-subtle)}
+/* A practical instruction remains information; it is not promoted to an emotional quote. */
+.wardrobe-takeaway{font-family:var(--font-body);font-size:var(--text-body-size);line-height:var(--text-body-leading);font-weight:500}
+.wardrobe-note p+p{margin-top:var(--space-3)}
+.wardrobe-exercise{margin:var(--space-6) 0;padding-left:var(--space-6)}
+.wardrobe-exercise li{padding:0 0 var(--space-6) var(--space-2)}
+.wardrobe-exercise li+li{padding-top:var(--space-6);border-top:1px solid var(--semantic-line)}
+.wardrobe-exercise strong{display:block;margin-bottom:var(--space-2)}
+.wardrobe-ending{margin:var(--space-8) 0 var(--space-16);font-family:var(--text-quote-font);font-size:var(--text-quote-size);line-height:var(--text-quote-leading);font-weight:var(--text-quote-weight)}
+.course-page .anchor-nav .lesson-sub-link{padding-left:var(--space-3);border-left:1px solid var(--semantic-line);font-size:var(--text-caption-size);line-height:var(--text-caption-leading)}
+@media(max-width:767px){.wardrobe-figures,.wardrobe-figures[data-count="3"]{grid-template-columns:1fr}.wardrobe-figures img{max-height:280px}.wardrobe-figures[data-count="1"] img{max-height:320px}}
