@@ -1,15 +1,15 @@
-/* Product lessons and the embedded PRD use the existing tutorial text roles. */
-.product-lesson{max-width:var(--component-reading-width);margin-top:var(--space-8);font:var(--text-body-weight) var(--text-body-size)/var(--text-body-leading) var(--text-body-font)}
-.product-lesson p{margin:var(--space-4) 0}
-.product-lesson .product-example,.product-lesson .product-context,.product-lesson figcaption{font:var(--text-caption-weight) var(--text-caption-size)/var(--text-caption-leading) var(--text-caption-font);color:var(--semantic-muted)}
-.product-lesson .product-example{margin:0 0 var(--space-8);padding:var(--space-4);background:var(--semantic-subtle);border-radius:var(--radius-card)}
-.product-example p{margin:0}.product-example p+p{margin-top:var(--space-2)}
-.product-section{margin-top:var(--space-12);scroll-margin-top:112px}
-.rich .product-lesson h3{margin:0 0 var(--space-4);font:var(--text-title-weight) var(--text-title-size)/var(--text-title-leading) var(--text-title-font)}
-.rich .product-lesson h4{margin:var(--space-6) 0 var(--space-2);font:500 var(--text-body-size)/var(--text-body-leading) var(--text-body-font)}
-.product-lesson ul,.product-lesson ol{margin:var(--space-4) 0;padding-left:var(--space-6)}
-.product-lesson li+li{margin-top:var(--space-3)}
-.product-lesson strong{font-weight:500}
+/* Course reading and the embedded PRD use the existing tutorial text roles. */
+:is(.product-lesson,.course-reading){max-width:var(--component-reading-width);margin-top:var(--space-8);font:var(--text-body-weight) var(--text-body-size)/var(--text-body-leading) var(--text-body-font)}
+:is(.product-lesson,.course-reading) p{margin:var(--space-4) 0}
+:is(.product-lesson,.course-reading) :is(.product-example,.product-context,figcaption,.course-reading-example,.course-reading-context){font:var(--text-caption-weight) var(--text-caption-size)/var(--text-caption-leading) var(--text-caption-font);color:var(--semantic-muted)}
+:is(.product-lesson,.course-reading) :is(.product-example,.course-reading-example){margin:0 0 var(--space-8);padding:var(--space-4);background:var(--semantic-subtle);border-radius:var(--radius-card)}
+:is(.product-example,.course-reading-example) p{margin:0}:is(.product-example,.course-reading-example) p+p{margin-top:var(--space-2)}
+.product-section,.course-reading-section{margin-top:var(--space-12);scroll-margin-top:112px}
+.rich :is(.product-lesson,.course-reading) h3{margin:0 0 var(--space-4);font:var(--text-title-weight) var(--text-title-size)/var(--text-title-leading) var(--text-title-font)}
+.rich :is(.product-lesson,.course-reading) h4{margin:var(--space-6) 0 var(--space-2);font:500 var(--text-body-size)/var(--text-body-leading) var(--text-body-font)}
+:is(.product-lesson,.course-reading) :is(ul,ol){margin:var(--space-4) 0;padding-left:var(--space-6)}
+:is(.product-lesson,.course-reading) li+li{margin-top:var(--space-3)}
+:is(.product-lesson,.course-reading) strong{font-weight:500}
 .product-figures{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-6);margin:var(--space-8) 0}
 .product-figures figure,.product-figure{margin:0;min-width:0}
 .product-figures img,.product-figure img{display:block;width:100%;height:auto;max-height:400px;object-fit:contain;border-radius:var(--radius-image)}
