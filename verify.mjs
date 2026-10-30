@@ -31,7 +31,7 @@ test('本地保存不可用时返回可处理状态',()=>assert.equal(D.storage.
 const tokens=JSON.parse(read('tokens.json'));
 const expected={primary:'#20A0E0','primary-deep':'#0060A0','surface-blue':'#EAF4FB','mist-pink':'#F0D9DC','milk-coffee':'#C9A98C',white:'#FFFFFF',paper:'#FDFCFA','april-gray':'#E0E0E0',muted:'#7A8A9A',ink:'#2A3A4A',success:'#4A8B3B',warning:'#7E5E07','warning-surface':'#F5C542',error:'#C21F26','error-surface':'#F0D9DC',info:'#1879AA',accent:'#E4555B'};
 test('用户指定的 17 项原始角色逐值一致',()=>assert.deepEqual(tokens.color,expected));
-test('主要动作使用澄海蓝，未偷换为深阶',()=>assert.equal(tokens.semantic.action,'#20A0E0'));
+test('主要动作使用澄海蓝，未偷换为深阶',()=>assert.equal(tokens.semantic.action,'var(--color-primary)'));
 test('基础变量原文的四级文字与金句参数',()=>{
   assert.deepEqual(tokens.typography,{
     hero:{size:'48px',leading:1.2,weight:500,font:'display'},
@@ -40,6 +40,13 @@ test('基础变量原文的四级文字与金句参数',()=>{
     caption:{size:'13px',leading:1.6,weight:400,font:'body'},
     quote:{size:'24px',leading:1.6,weight:400,font:'quote'}
   });
+});
+test('兼容名称只引用基础角色，避免数值副本漂移',()=>{
+  assert.equal(tokens['font-size'].hero,'var(--text-hero-size)');
+  assert.equal(tokens['font-size'].caption,'var(--text-caption-size)');
+  assert.equal(tokens.shadow.sm,'var(--shadow-soft)');
+  assert.equal(tokens.radius.hero,'var(--radius-card)');
+  assert.equal(tokens.font.mono,'var(--font-num)');
 });
 test('金句与数字字体均有独立职责',()=>{
   assert.match(tokens.font.quote,/鸿雷小纸条青春体/);

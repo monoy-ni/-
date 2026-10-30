@@ -1,7 +1,7 @@
 {
   "kind": "逻辑和源文件检查",
-  "total": 43,
-  "passed": 43,
+  "total": 44,
+  "passed": 44,
   "checks": [
     {
       "name": "system.js 语法",
@@ -101,6 +101,10 @@
     },
     {
       "name": "基础变量原文的四级文字与金句参数",
+      "pass": true
+    },
+    {
+      "name": "兼容名称只引用基础角色，避免数值副本漂移",
       "pass": true
     },
     {
