@@ -1,4 +1,4 @@
-/* 《今天怎么穿》网页阅读排版。界面样式只引用原设计系统变量。 */
+/* 《今天怎么穿》网页阅读排版。辅助信息按用户基础变量中的 text-caption 角色。 */
 .course-page .rich .wardrobe-lesson {
   max-width: var(--component-reading-width);
   margin-top: var(--space-8);
@@ -12,10 +12,15 @@
   line-height: 1.4;
 }
 .wardrobe-subtitle { font-size: var(--font-size-lead); }
-.wardrobe-audience {
-  font-size: var(--font-size-small);
-  color: var(--semantic-link);
+.course-page .rich .wardrobe-lesson .text-caption {
+  /* 设计系统基础变量.html：text-caption = 13px / 1.6 / 400。 */
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--semantic-muted);
 }
+.wardrobe-example p + p { margin-top: var(--space-2); }
 .wardrobe-cover { margin: var(--space-6) 0; }
 .wardrobe-cover img { max-height: 320px; }
 .wardrobe-lesson .wardrobe-map {
