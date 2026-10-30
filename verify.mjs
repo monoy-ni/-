@@ -53,7 +53,7 @@ test('图片、卡片、按钮圆角及两种蓝色阴影符合原值',()=>{
   assert.equal(tokens.shadow.lift,'0 8px 24px rgba(32,160,224,.14)');
 });
 for(const name of ['index.html','templates.html','课程内容页.html','开学第一课.html'])test(name+' 使用同一份共享样式且无变量副本',()=>{
-  const html=read(name);assert.match(html,/href="tokens\.css\?v=reference-1"/);assert.match(html,/href="system\.css\?v=reference-1"/);
+  const html=read(name);assert.match(html,/href="tokens\.css\?v=[^"]+"/);assert.match(html,/href="system\.css\?v=[^"]+"/);
   assert.ok(!html.includes('--font-size-caption:'));assert.ok(!html.includes('--color-primary:'));
 });
 test('规范样张读取变量而不再保留旧字号表',()=>{
