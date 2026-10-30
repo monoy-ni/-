@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif">
+  <rect width="640" height="300" fill="#FDFCFA"/>
+  <text x="320" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#2A3A4A">同一句话：帮我准备生日蛋糕</text>
+
+  <rect x="24" y="60" width="284" height="216" rx="16" fill="#FFFFFF" stroke="#E0E0E0"/>
+  <text x="166" y="94" text-anchor="middle" font-size="17" font-weight="700" fill="#7A8A9A">普通 AI</text>
+  <rect x="48" y="114" width="236" height="64" rx="10" fill="#EAF4FB"/>
+  <text x="64" y="140" font-size="14" fill="#2A3A4A">你可以打开外卖 App，</text>
+  <text x="64" y="162" font-size="14" fill="#2A3A4A">搜“生日蛋糕”，点下单……</text>
+  <text x="166" y="222" text-anchor="middle" font-size="15" fill="#7A8A9A">只告诉你怎么做</text>
+  <text x="166" y="248" text-anchor="middle" font-size="15" fill="#7A8A9A">事情还得你自己去办</text>
+
+  <rect x="332" y="60" width="284" height="216" rx="16" fill="#FFFFFF" stroke="#20A0E0" stroke-width="2"/>
+  <text x="474" y="94" text-anchor="middle" font-size="17" font-weight="700" fill="#0060A0">agent</text>
+  <rect x="356" y="114" width="236" height="64" rx="10" fill="#20A0E0"/>
+  <text x="372" y="140" font-size="14" fill="#FFFFFF">蛋糕订好了，</text>
+  <text x="372" y="162" font-size="14" fill="#FFFFFF">明天下午 3 点送到。</text>
+  <text x="474" y="222" text-anchor="middle" font-size="15" fill="#2A3A4A">自己动手去订</text>
+  <text x="474" y="248" text-anchor="middle" font-size="15" fill="#2A3A4A">直接给你送过来</text>
+</svg>
