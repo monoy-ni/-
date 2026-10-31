@@ -5,6 +5,10 @@
 :is(.product-lesson,.course-reading) :is(.product-example,.course-reading-example){margin:0 0 var(--space-8);padding:var(--space-4);background:var(--semantic-subtle);border-radius:var(--radius-card)}
 :is(.product-example,.course-reading-example) p{margin:0}:is(.product-example,.course-reading-example) p+p{margin-top:var(--space-2)}
 .product-section,.course-reading-section{margin-top:var(--space-12);scroll-margin-top:112px}
+.course-outline .course-reference-step{margin-top:var(--space-8)}
+.rich .course-outline .course-reference-step>h3{margin-bottom:0}
+.rich .course-outline .course-reference-step>h4{margin:var(--space-4) 0 0}
+.course-outline .course-reference-step>.wardrobe-figures{margin-top:var(--space-4)}
 .rich :is(.product-lesson,.course-reading) h3{margin:0 0 var(--space-4);font:var(--text-title-weight) var(--text-title-size)/var(--text-title-leading) var(--text-title-font)}
 .rich :is(.product-lesson,.course-reading) h4{margin:var(--space-6) 0 var(--space-2);font:500 var(--text-body-size)/var(--text-body-leading) var(--text-body-font)}
 :is(.product-lesson,.course-reading) :is(ul,ol){margin:var(--space-4) 0;padding-left:var(--space-6)}

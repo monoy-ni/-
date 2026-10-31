@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="system.css?v=reference-2">
 <link rel="stylesheet" href="course-layout.css?v=product-reader-1">
 <link rel="stylesheet" href="wardrobe-lesson.css?v=reference-2">
-<link rel="stylesheet" href="product-lesson.css?v=collaboration-1">
+<link rel="stylesheet" href="product-lesson.css?v=course-outline-1">
 </head>
 <body class="template-body course-page" id="top">
 <a class="skip" href="#course-main">跳到课程正文</a>
@@ -23,142 +23,99 @@
 <dialog id="page-search" class="search-dialog" aria-labelledby="page-search-title"><div class="dialog-inner"><div class="row between"><h2 id="page-search-title">在这一页查找</h2><button class="btn quiet icon-btn" type="button" data-close-dialog aria-label="关闭查找"><span data-icon="close"></span></button></div><label class="sr-only" for="page-search-input">输入主题关键词</label><div class="control mt"><span data-icon="search"></span><input id="page-search-input" type="search" placeholder="输入主题关键词" autofocus></div><ul class="course-search-results" id="page-search-results"></ul><p id="search-message" class="caption" role="status"></p></div></dialog>
 <dialog id="course-notes" aria-labelledby="course-notes-title"><div class="dialog-inner"><div class="row between"><h2 id="course-notes-title">我的笔记</h2><button class="btn quiet icon-btn" type="button" data-close-dialog aria-label="关闭笔记"><span data-icon="close"></span></button></div><p class="small muted" id="note-topic">开学第一课 · 产品</p><div class="field mt"><label for="reader-note">记录</label><textarea id="reader-note" maxlength="600" placeholder="写下一条自己的记录" autofocus aria-describedby="note-error note-hint"></textarea><p id="note-error" class="error-text" role="alert"></p><p id="note-hint" class="hint">笔记只保存在当前浏览器。</p></div><div class="dialog-actions"><button class="btn outline" type="button" data-close-dialog>稍后再写</button><button class="btn primary" type="button" id="save-reader-note">保存笔记</button></div></div></dialog>
 <template id="product-research-body">
-<div class="product-lesson">
+<div class="product-lesson course-outline">
 <aside class="course-reading-example"><p>你想亲手做一份礼物送给朋友，觉得拼豆是个不错的选择。可是，找来的图案很多：有做好的挂件，也有可以照着拼的图纸。你还想过，能不能自己画一个原创图案。</p>
 <p>现在还拿不准选什么，也不知道自己能不能做出来。先看看别人已经做过的作品，才能慢慢确定这份礼物该怎么做。</p></aside>
-<p class="course-reading-context">执行参考顺序：调研目标 → 核心定位 → 产品上线时间 → 创始团队与背景 → 产品形态 → 实地测试评估区 → 调研总结。</p>
 <div class="product-figures">
     <figure><img width="736" height="914" src="assets/pd1.png" alt="黑色无牙仔与白色光煞的拼豆挂件" loading="lazy"><figcaption>参考一：拼豆挂件。图片来自课程原稿。</figcaption></figure>
     <figure><img width="720" height="787" src="assets/pd2.png" alt="带有颜色编号的猫咪拼豆图纸" loading="lazy"><figcaption>参考二：拼豆图纸。图片来自课程原稿。</figcaption></figure>
   </div>
 <section class="course-reading-section course-reference-step" id="product-topic-1-goal" data-lesson-nav="1. 调研目标" data-lesson-search="调研目标">
-<h3 tabindex="-1">第一步：写清楚看的是哪件作品、为什么看——调研目标</h3>
-<p>假设朋友喜欢无牙仔，你找到了一个无牙仔拼豆挂件，准备先了解它。先把这次调研的名字和目的写下来：</p>
-<ul><li><strong>调研对象：</strong>无牙仔拼豆挂件。</li><li><strong>调研目的：</strong>了解这种作品怎样做成、适不适合送给朋友，帮助自己确定礼物的制作方向。</li></ul>
-<p>这样，后面看作品背景、制作过程和使用感受时，都知道自己想从中找到什么。</p>
+<h3 tabindex="-1">第一步：调研目标</h3>
+
 </section>
 <section class="course-reading-section course-reference-step" id="product-topic-1-position" data-lesson-nav="2. 核心定位" data-lesson-search="核心定位">
-<h3 tabindex="-1">第二步：弄清楚它为谁解决什么需要——核心定位</h3>
-<p>接着看，这件作品主要给谁使用，又因为什么吸引这些人。</p>
-<p>在这个例子里，可以先把它的定位概括为：面向喜欢无牙仔的人，把喜爱的角色做成可以随身携带、装饰或送礼的拼豆作品。</p>
-<p>这句话让你继续思考，它吸引人的地方和朋友的喜好是否相合。带着这个判断，再去了解作品出现的时间和背景。</p>
+<h3 tabindex="-1">第二步：核心定位</h3>
+
 </section>
 <section class="course-reading-section course-reference-step" id="product-topic-1-context" data-lesson-nav="3. 产品上线时间" data-lesson-search="产品上线时间">
-<h3 tabindex="-1">第三步：了解它什么时候出现，当时为什么受关注——产品上线时间</h3>
-<p>找找这件作品最早发布或开始售卖的时间，并记下时间信息来自哪里。还没有查到，就把这一项留作待确认。</p>
-<p>知道时间以后，再看看当时的背景：这个角色是不是正受到关注？拼豆这种形式是不是刚好流行？还是这类作品已经存在很久，持续有人制作和使用？</p>
-<p>把时间和当时的情况放在一起，才能继续判断自己准备参考的做法，受到多少近期热度的影响，对这次送礼又有什么参考价值。</p>
+<h3 tabindex="-1">第三步：产品上线时间</h3>
+
 </section>
 <section class="course-reading-section course-reference-step" id="product-topic-1-team" data-lesson-nav="4. 创始团队与背景" data-lesson-search="创始团队与背景">
-<h3 tabindex="-1">第四步：看看是谁做的、几个人怎样分工——创始团队与背景</h3>
-<p>再去了解这件作品背后的人：图纸是谁画的，拼豆是谁制作的，挂绳和包装又由谁完成？这些事情是一个人做的，还是几个人合作完成的？</p>
-<p>假设进一步了解到，它由一个人设计和制作，是亲手送给朋友的礼物。你就可以继续参考这个人的做法，看看自己需要完成哪些环节。</p>
-<p>如果实际由几个人分工完成，也把各自负责的部分记下来，再判断哪些自己会做，哪些还需要学习或找人帮忙。这样，“我能不能做”就有了更具体的依据。</p>
+<h3 tabindex="-1">第四步：创始团队与背景</h3>
+
 </section>
 <section class="course-reading-section course-reference-step" id="product-topic-1-form" data-lesson-nav="5. 产品形态" data-lesson-search="产品形态">
-<h3 tabindex="-1">第五步：从定位、载体和使用动作展开看——产品形态</h3>
-<p>了解背景以后，再把眼前这件作品本身看清楚。这里分成三个方向记录：</p>
-<ul><li><strong>基本定位：</strong>面向无牙仔爱好者、用于随身装饰或送礼的拼豆作品。</li><li><strong>产品载体：</strong>实体挂件，可以通过挂绳等连接方式挂在背包上；图纸则是制作时使用的参考材料。</li><li><strong>交互特点：</strong>使用者通过图案辨认角色，把挂件挂到包上，随身携带，也可能根据需要取下或换个位置。选择、挂上、取下、携带，都是接下来需要观察的使用动作。</li></ul>
-<p>这三部分放在一起，就能说明它是什么、以什么形式存在，以及人怎样接触和使用它。下一步可以带着这些具体动作去试。</p>
+<h3 tabindex="-1">第五步：产品形态</h3>
+<h4>基本定位</h4>
+<h4>产品载体</h4>
+<h4>交互特点</h4>
 </section>
 <section class="course-reading-section course-reference-step" id="product-topic-1-evidence" data-lesson-nav="6. 实地测试评估区" data-lesson-search="实地测试评估区">
-<h3 tabindex="-1">第六步：亲自接触，记录值得参考的地方——实地测试评估区</h3>
-<p>先说清楚，自己准备参考的是哪一部分。</p>
-<p>如果想参考成品怎样使用，就找一件真实成品试挂：图案是否容易辨认，放在背包上大小是否合适，挂上和取下是否方便，走动时会不会碍事。拍下对应的实物和使用照片，把观察到的情况写在照片旁边。</p>
-<p>如果想参考制作方法，就继续了解图纸怎样变成成品、挂件怎样连接，把制作中的关键环节和自己还不会的地方记下来。</p>
-<p>购买者的评价也可以一起看，了解他们提到了哪些细节。自己的实际观察和他人的反馈分别记录，后面总结时就能说清判断来自哪里。现有课程的场景配图用于说明情境，实测记录需要补充真实使用的材料。</p>
+<h3 tabindex="-1">第六步：实地测试评估区</h3>
 <figure class="product-figure"><img width="1280" height="714" src="assets/pd3.png" alt="白色拼豆挂件挂在黑色背包上的使用场景" loading="lazy"><figcaption>挂件的使用场景示意。图片来自课程原稿。</figcaption></figure>
 <figure class="product-figure"><img width="791" height="1280" src="assets/pd4.jpg" alt="购买者展示拼豆挂件并评价配色与小饰品的评论截图" loading="lazy"><figcaption>购买者的使用反馈截图。图片来自课程原稿。</figcaption></figure>
 </section>
 <section class="course-reading-section course-reference-step" id="product-topic-1-conclusion" data-lesson-nav="7. 调研总结" data-lesson-search="调研总结">
-<h3 tabindex="-1">第七步：把前面的发现收成制作决定——调研总结</h3>
-<p>最后回到第一步写下的目的：这种作品适不适合送给朋友，自己准备怎样做？</p>
-<p>结合前面的记录，讲清楚几件事：</p>
-<ul><li><strong>朋友是否可能喜欢：</strong>参考作品的定位和角色，是否与朋友的喜好相合。</li><li><strong>自己是否有条件完成：</strong>设计、制作和配件连接等环节，哪些已经了解，哪些还需要准备。</li><li><strong>挂件形式是否合适：</strong>实际使用和他人反馈，支持了哪些判断。</li><li><strong>接下来怎样做：</strong>准备选什么角色、做成什么形式，先补充哪一项还没弄清楚的信息。</li></ul>
-<p>如果这些问题已经得到确认，就可以确定这次先做一个朋友喜欢的角色拼豆挂件。还没确认的部分，也留下明确的下一步。这样，调研得到的材料就接到了自己的制作行动上。</p>
+<h3 tabindex="-1">第七步：调研总结</h3>
 <figure class="product-figure"><img width="736" height="808" src="assets/pd5.png" alt="黑白色猫咪形象的拼豆配色图纸" loading="lazy"><figcaption>继续选择朋友喜欢的图案。图片来自课程原稿。</figcaption></figure>
 </section>
 </div>
 </template>
 <template id="product-function-body">
-<div class="product-lesson">
+<div class="product-lesson course-outline">
 <aside class="course-reading-example"><p>冬天到了，小明早上躺在暖暖的被子里，一想到室内没有空调、外面又冷，就不愿意起床上学。</p>
 <p>有人听到“不想起床”，就想到做一个网课平台，让他躺着也能上课。接着，为了监督上课，加摄像头；为了方便提问，又加聊天功能。功能越做越多，小明最初为什么不想起床，却还没讲清楚。</p></aside>
-<p class="course-reading-context">执行参考顺序：用户目标 → 识别障碍 → 设计解决方案 → 验证最小功能 → 数据反馈与迭代。</p>
 <figure class="product-figure"><img width="1080" height="2008" src="assets/image.png" alt="温暖卧室的床铺与窗外积雪的冬日街景" loading="lazy"><figcaption>被子里的温暖与外面的寒冷。情境配图来自课程原稿。</figcaption></figure>
 <section class="course-reading-section course-reference-step" id="product-topic-2-goal" data-lesson-nav="1. 用户目标" data-lesson-search="用户目标">
 <h3 tabindex="-1">第一步：用户目标</h3>
-<p>先说清楚，要帮助小明完成什么。</p>
-<p>在这个例子里，小明要起床，准备好去上学。后面无论提出什么做法，都需要回答：它怎样帮助小明完成这件事？</p>
+
 </section>
 <section class="course-reading-section course-reference-step" id="product-topic-2-obstacle" data-lesson-nav="2. 识别障碍" data-lesson-search="识别障碍">
 <h3 tabindex="-1">第二步：识别障碍</h3>
-<p>接着看，他为什么迟迟没有行动。</p>
-<p>小明说出的困难是冷。被子里暖，离开被子就不舒服，所以他不愿意出来。把这个具体障碍记下来，后面的方案才有要回应的地方。</p>
+
 </section>
 <section class="course-reading-section course-reference-step" id="product-topic-2-solution" data-lesson-nav="3. 设计解决方案" data-lesson-search="设计解决方案">
 <h3 tabindex="-1">第三步：设计解决方案</h3>
-<p>围绕这个障碍，想想有哪些解决路径。</p>
-<p>比如，提前开好室内空调，减小被子内外的温差；或者，把热牛奶和早餐准备在容易拿到的地方，让起床后的准备更方便。</p>
-<p>先把可尝试的做法列出来，说明每一种准备改变什么。再结合眼前的条件，选出适合先试的做法。</p>
+
 </section>
 <section class="course-reading-section course-reference-step" id="product-topic-2-validation" data-lesson-nav="4. 验证最小功能" data-lesson-search="验证最小功能">
 <h3 tabindex="-1">第四步：验证最小功能</h3>
-<p>先试一个小的改动，观察它能不能帮助小明起床。</p>
-<p>这时需要检查的是：离开被子的困难有没有减轻，小明是否更愿意起来，并继续准备上学。根据实际情况，判断这个改动是否碰到了原来的问题。</p>
+
 </section>
 <section class="course-reading-section course-reference-step" id="product-topic-2-feedback" data-lesson-nav="5. 数据反馈与迭代" data-lesson-search="数据反馈与迭代">
 <h3 tabindex="-1">第五步：数据反馈与迭代</h3>
-<p>继续观察实际行为，而后决定怎样调整。</p>
-<p>如果有帮助，就继续看这种帮助是否稳定；如果没有，就回来确认，冷的问题是否解决，还有什么没有弄清楚。保留有帮助的做法，再根据观察到的问题继续修改。</p>
-<p>这样，每次增加或调整一个做法，都能回到小明起床上学这件事上判断它的作用。</p>
+
 </section>
 </div>
 </template>
 <template id="product-project-body">
-<div class="product-lesson">
+<div class="product-lesson course-outline">
 <aside class="course-reading-example"><p>课堂里假设要做一辆城市通勤自行车，给成年人日常短途出行使用，比如从住处去学校、去附近的商店。</p>
 <p>“做一辆自行车”还不足以让大家开始分工。需要继续说明，人要靠这辆车完成什么，它必须具备哪些能力，每种能力怎样算做到，以及它们放在一起能不能完成一次出行。</p></aside>
-<p class="course-reading-context">执行参考顺序：明确最终目标 → 寻找实现目标所必需的能力 → 将每一种能力拆成独立需求 → 检查需求之间的关系。</p>
 <section class="course-reading-section course-reference-step" id="product-topic-3-goal" data-lesson-nav="1. 明确最终目标" data-lesson-search="明确最终目标">
 <h3 tabindex="-1">第一步：明确最终目标</h3>
-<p>把“做一辆自行车”继续讲清楚：让目标用户能够安全、方便地完成城市短途出行。</p>
-<p>接下来写出的每项内容，都要能说明自己怎样服务这个目标。比如，制动是为了帮助使用者按需要减速和停止。</p>
+
 </section>
 <section class="course-reading-section course-reference-step" id="product-topic-3-abilities" data-lesson-nav="2. 寻找实现目标所必需的能力" data-lesson-search="寻找实现目标所必需的能力">
 <h3 tabindex="-1">第二步：寻找实现目标所必需的能力</h3>
-<p>从目标往下问：</p>
-<ul><li>能不能前进？</li><li>能不能转弯？</li><li>能不能停下来？</li><li>能不能正常乘坐？</li><li>能不能完成一次实际出行？</li></ul>
-<p>顺着这些问题，找到驱动、方向控制、制动、稳定、人体适配等需要。继续考虑一次完整的日常使用，还会涉及携物、停放、检查维护和使用指导等内容。</p>
-<p>这里先看清需要哪些能力，再进入每一项的详细说明。</p>
+
 </section>
 <section class="course-reading-section course-reference-step" id="product-topic-3-requirements" data-lesson-nav="3. 将每一种能力拆成独立需求" data-lesson-search="将每一种能力拆成独立需求">
 <h3 tabindex="-1">第三步：将每一种能力拆成独立需求</h3>
-<p>每一种能力都单独写，并按执行参考中的八个栏目展开。下面拿“通过踩踏让车前进”来说明。</p>
 <h4>一、背景说明</h4>
-<p>使用者需要从一个地点去另一个地点。踩踏前进，是这辆人力自行车实现出行的基础。</p>
 <h4>二、功能描述</h4>
-<p>使用者坐在车上，通过双脚交替踩踏，使自行车持续、可控地向前移动。</p>
 <h4>三、优先级</h4>
-<p>这是必须完成的内容。它关系到自行车能否实现最基本的移动，需要明确写进交付要求。</p>
 <h4>四、输入/前置条件</h4>
-<p>先说明开始时需要什么：车辆正确装配、状态正常，使用者具备基本骑行能力，并在适合的场地进行检查。使用者的踩踏动作和力量，是这一项运行时的输入。</p>
 <h4>五、处理流程</h4>
-<p>把这一项内部发生的动作按先后讲清楚：坐上车、放好双脚、交替踩踏、动力传到车轮、车向前移动。</p>
-<p>这里的动作顺序属于“处理流程”这个栏目，不替代外面八个栏目的顺序。</p>
 <h4>六、输出/后置条件</h4>
-<p>说明做过以后应当看到什么：使用者能够通过踩踏持续向前骑行，相关部件没有异常，车辆能够继续使用。</p>
 <h4>七、补充说明</h4>
-<p>说明这一项适用的范围和仍需确定的细节。在这个例子里，目标是普通人的日常通勤；更具体的性能要求，要在项目中继续明确。</p>
 <h4>八、如何设计验证</h4>
-<p>把检查的办法写出来：怎样观察起步、持续踩踏和停止踩踏后的表现，要记录什么，依据什么判断这一项达到了约定要求。</p>
-<p>其他能力也按这八个栏目写清楚。完整展开内容见<a href="bicycle-prd.html">自行车需求文档</a>。</p>
 </section>
 <section class="course-reading-section course-reference-step" id="product-topic-3-relations" data-lesson-nav="4. 检查需求之间的关系" data-lesson-search="检查需求之间的关系">
 <h3 tabindex="-1">第四步：检查需求之间的关系</h3>
-<p>把已经拆开的内容重新放在一起，看它们能不能共同服务最终目标。</p>
-<p>例如，车能够前进，却不能正常制动，就仍然不能交付使用。还要继续看，转向、稳定、适配和其他能力之间是否配合，是否缺少某个必要条件。</p>
-<p>每项内容既要单独讲清楚，也要在这里检查它与其他内容的关系。</p>
+
 </section>
 <section class="product-section" id="product-topic-3-prd" data-lesson-nav="自行车项目需求文档" data-lesson-search="自行车项目需求文档">
     <h3 tabindex="-1">自行车项目需求文档</h3>
@@ -171,133 +128,99 @@
 </div>
 </template>
 <template id="collaboration-course-body">
-<div class="course-reading">
+<div class="course-reading course-outline">
 <aside class="course-reading-example"><p>你们三个人要一起完成一份 C 语言小组作业。大家一开始聊得很好，也都愿意认真做，可是，两种分工后来都出了问题。</p>
 <p>第一组分成“小明做 PPT、小红写程序、小白讲解”。小明觉得先有代码才能做 PPT；小红觉得先有 PPT 才方便写程序；小白觉得前面两人没做好，自己也没法讲。站在各自的立场，都能说出理由，整个作业却停在了互相等待上。</p>
 <p>第二组说，什么都由三个人一起做。后来，一个人觉得别人效率低，其他人却觉得他投入的时间不够，最后也吵了起来。</p></aside>
-<p class="course-reading-context">执行参考顺序：明确合作规范和执行参考 → 把所有做的任务做到原子化分工 → 及时进行交流 → 不重复不一定是必要的。</p>
 <section class="course-reading-section course-reference-step" id="development-topic-4-agreement" data-lesson-nav="1. 明确合作规范和执行参考" data-lesson-search="明确合作规范和执行参考">
 <h3 tabindex="-1">第一步：明确合作规范和执行参考</h3>
-<p>先让每个人给出一版任务拆解。三个人，就有三版方案。把它们放在一起，讨论作业究竟要完成什么，哪些地方理解相同，哪些地方还没有讲清楚。</p>
-<p>然后，把截止时间和每个任务的结束标准说具体：程序要完成什么，PPT 要说清什么，讲解材料要准备到什么程度。PPT 等材料的共同标准，也在这里先约定好。</p>
-<p>把讨论结果整理成同一份方案，作为后面的合作规范和执行参考。大家对着这份内容做事，发生分歧时也能回到约定里讨论。</p>
+
 </section>
 <section class="course-reading-section course-reference-step" id="development-topic-4-modules" data-lesson-nav="2. 把所有做的任务做到原子化分工" data-lesson-search="把所有做的任务做到原子化分工">
 <h3 tabindex="-1">第二步：把所有做的任务做到原子化分工</h3>
-<p>在这个例子里，把工作拆到每个人能负责、也能检查完成情况的模块。每个人完成自己模块的代码、PPT 和讲解材料，再分别承担整份作业的整合职责。</p>
 <div class="course-table-wrap" tabindex="0" role="region" aria-label="模块与整合职责分工"><table class="course-table"><thead><tr><th scope="col">同学</th><th scope="col">自己完整负责的部分</th><th scope="col">另承担的整合职责</th></tr></thead><tbody><tr><td>小明</td><td>模块一的代码、PPT、讲解材料</td><td>整合整份作业的 PPT</td></tr><tr><td>小红</td><td>模块二的代码、PPT、讲解材料</td><td>整合整份作业的程序</td></tr><tr><td>小白</td><td>模块三的代码、PPT、讲解材料</td><td>整合讲解材料，负责整体讲解</td></tr></tbody></table></div>
-<p>模块一、二、三需要依据真实作业来确定。把每个人要交出的内容和整合职责一起讲清楚，大家才知道自己负责做到哪里。</p>
 </section>
 <section class="course-reading-section course-reference-step" id="development-topic-4-discussion" data-lesson-nav="3. 及时进行交流" data-lesson-search="及时进行交流">
 <h3 tabindex="-1">第三步：及时进行交流</h3>
-<p>做的过程中，需要别人的什么材料、哪里卡住了，就把具体问题及时说出来。发现双方理解不一致，也回到共同约定里继续讨论。</p>
-<p>整合时，小明按事先共同定好的标准检查 PPT；小红和小白也分别检查程序与讲解。发现缺少内容或不符合约定，就找到对应模块的同学补齐。</p>
-<p>讨论时说清楚：哪个模块还缺什么，依据哪条标准判断，下一步由谁在什么时候补上。这样，交流能够帮助任务继续推进。</p>
+
 </section>
 <section class="course-reading-section course-reference-step" id="development-topic-4-repetition" data-lesson-nav="4. 不重复不一定是必要的——保留有目的的重复" data-lesson-search="不重复不一定是必要的——保留有目的的重复">
 <h3 tabindex="-1">第四步：不重复不一定是必要的——保留有目的的重复</h3>
-<p>前面让三个人各写一版拆解，就是一种有目的的重复。每个人先独立想一遍，再把三版放到一起，才容易看出遗漏和理解上的差别。</p>
-<p>这种重复可以帮助共同讨论、比较和检查，因此值得保留。安排重复工作时，把要比较什么、比较后怎样形成共同决定讲清楚，就能说明这份额外投入的作用。</p>
+
 </section>
 </div>
 </template>
 <template id="backend-course-body">
-<div class="course-reading">
+<div class="course-reading course-outline">
 <aside class="course-reading-example"><p>假设你是一位秘书。同事每天把活动方案、会议记录和预算表交给你。最开始只有三份，放在桌面就能找到。</p>
 <p>后来材料越来越多，领导开始问：“迎新活动有哪些材料还没审核？谁交的？最新版在哪里？”只知道文件堆在哪儿，已经回答不了这些问题。</p></aside>
-<p class="course-reading-context">执行参考顺序：材料越来越多，为什么不能只靠记忆？ → 先做一张材料登记表——理解表、行、列 → 秘书每天做哪几件事？ → 提交人改了电话，要改多少处？ → 登记信息和材料原件放在哪里？ → 谁都能翻所有材料吗？</p>
 <section class="course-reading-section course-reference-step" id="development-topic-2-lesson-1" data-lesson-nav="1. 材料越来越多，为什么不能只靠记忆？" data-lesson-search="材料越来越多，为什么不能只靠记忆？">
 <h3 tabindex="-1">第一项：材料越来越多，为什么不能只靠记忆？</h3>
-<p>材料少时，靠记忆还能应付；材料多了，秘书需要持续记住名称、提交人、所属项目和审核进度，还要让别人也查得到。</p>
-<p>这时就需要一种组织和保存信息的办法。先从这个实际需要出发，再理解为什么要有数据库。</p>
+
 </section>
 <section class="course-reading-section course-reference-step" id="development-topic-2-lesson-2" data-lesson-nav="2. 先做一张材料登记表——理解表、行、列" data-lesson-search="先做一张材料登记表——理解表、行、列">
 <h3 tabindex="-1">第二项：先做一张材料登记表——理解表、行、列</h3>
-<p>先把每份材料需要记录的内容确定下来，再逐份登记。</p>
 <div class="course-table-wrap" tabindex="0" role="region" aria-label="材料登记表"><table class="course-table"><thead><tr><th scope="col">材料编号</th><th scope="col">材料名称</th><th scope="col">提交人</th><th scope="col">所属项目</th><th scope="col">状态</th></tr></thead><tbody><tr><td>M001</td><td>活动方案</td><td>小王</td><td>迎新活动</td><td>待审核</td></tr><tr><td>M002</td><td>预算清单</td><td>小李</td><td>迎新活动</td><td>已审核</td></tr><tr><td>M003</td><td>会议记录</td><td>小王</td><td>读书会</td><td>待审核</td></tr></tbody></table></div>
-<p>整张登记表对应一张表；一份材料的记录占一行；名称、提交人、状态等内容分在不同的列。固定编号帮助大家准确指出要找、要改的是哪份材料。</p>
 </section>
 <section class="course-reading-section course-reference-step" id="development-topic-2-lesson-3" data-lesson-nav="3. 秘书每天做哪几件事？" data-lesson-search="秘书每天做哪几件事？">
 <h3 tabindex="-1">第三项：秘书每天做哪几件事？</h3>
-<p>收到新材料，就新增登记；领导找材料，就按条件查找；审核完成，就更新状态；发现重复登记，就清理多余记录。</p>
-<p>把这些日常动作和登记表放在一起看，才能理解信息是怎样被保存、查询和持续更新的。</p>
+
 </section>
 <section class="course-reading-section course-reference-step" id="development-topic-2-lesson-4" data-lesson-nav="4. 提交人改了电话，要改多少处？" data-lesson-search="提交人改了电话，要改多少处？">
 <h3 tabindex="-1">第四项：提交人改了电话，要改多少处？</h3>
-<p>小王交过很多份材料。如果每条登记都重复写他的电话，换号码时，就需要一处处修改。</p>
-<p>可以单独建立人员表，材料登记里只记对应的人员编号。需要联系提交人时，再根据编号找到那个人的信息。人员资料更新，就集中修改这一份。</p>
+
 </section>
 <section class="course-reading-section course-reference-step" id="development-topic-2-lesson-5" data-lesson-nav="5. 登记信息和材料原件放在哪里？" data-lesson-search="登记信息和材料原件放在哪里？">
 <h3 tabindex="-1">第五项：登记信息和材料原件放在哪里？</h3>
-<p>登记表记录名称、状态、提交人等信息。文档和图片原件放进“档案柜”，登记表里留下它们的位置。</p>
-<p>这样，查到记录之后，还能继续找到原件。信息和原件各自怎样保存、又怎样联系起来，也就能说明白。</p>
+
 </section>
 <section class="course-reading-section course-reference-step" id="development-topic-2-lesson-6" data-lesson-nav="6. 谁都能翻所有材料吗？" data-lesson-search="谁都能翻所有材料吗？">
 <h3 tabindex="-1">第六项：谁都能翻所有材料吗？</h3>
-<p>先看工牌，确认来的人是谁；再看借阅规则，决定他能看、能改哪些材料。</p>
-<p>比如，同事修改自己提交的材料，审核员更新审核状态。把身份和处理范围说清楚，大家才知道哪些事情可以自己做，哪些要交给对应的人。</p>
+
 </section>
 </div>
 </template>
 <template id="research-question-body">
-<div class="course-reading">
+<div class="course-reading course-outline">
 <aside class="course-reading-example"><p>你想在下班后的业余时间试着做一个副业账号，可是，写下来的问题只有一句：“我该怎么开始？”</p>
 <p>你不清楚要准备什么设备，要不要露脸，每天能投入多少时间，也不知道自己能讲什么内容。这些疑问挤在一起，很难直接找到一个能照着做的答案。</p>
 <p>下面沿用这个账号例子，看看怎样通过提问，把眼前要弄清楚的事情逐渐说明白。例子中的时间、内容形式和数量，都是这次练习设定的条件。</p></aside>
-<p class="course-reading-context">执行参考顺序：通过广泛的询问先去明确你的问题的边界 → 围绕目标继续提出小问题 → 对这个过程进行循环 → 通过问题去收敛。</p>
 <section class="course-reading-section course-reference-step" id="research-topic-1-boundary" data-lesson-nav="1. 通过广泛的询问先去明确你的问题的边界" data-lesson-search="通过广泛的询问先去明确你的问题的边界">
 <h3 tabindex="-1">第一步：通过广泛的询问先去明确你的问题的边界</h3>
-<p>先把所有相关的疑问说出来：</p>
-<ul><li>要准备什么设备？手里的手机能不能满足这次尝试？</li><li>一定要露脸吗？有哪些内容形式可以继续了解？</li><li>每天需要做哪些事情？自己实际上能拿出多少时间？</li><li>已经熟悉哪些事情，有什么内容愿意持续讲？</li></ul>
-<p>这一阶段，想到什么相关问题就继续问，不要求先分类、排好顺序。每弄清楚一个问题，都会让这次准备做的事情更具体一点。</p>
-<p>比如，在这个例子里，你决定先使用已有手机，暂时尝试不露脸的图文，每天安排一小时。原来模糊的想法，就有了几项明确的条件。</p>
+
 </section>
 <section class="course-reading-section course-reference-step" id="research-topic-1-goal" data-lesson-nav="2. 围绕目标继续提出小问题" data-lesson-search="围绕目标继续提出小问题">
 <h3 tabindex="-1">第二步：围绕目标继续提出小问题</h3>
-<p>有了一些条件，再围绕这次想完成的事继续问。</p>
-<p>假设你想先完成一小批日常办公技巧图文，可以接着问：“自己有哪些经历可以讲？”“一篇图文准备回答什么问题？”“为了把第一篇做出来，还缺哪些材料？”</p>
-<p>这些问题都在帮助你靠近同一个目标。问过以后，就更清楚眼前要先弄明白什么。</p>
+
 </section>
 <section class="course-reading-section course-reference-step" id="research-topic-1-cycle" data-lesson-nav="3. 对这个过程进行循环" data-lesson-search="对这个过程进行循环">
 <h3 tabindex="-1">第三步：对这个过程进行循环</h3>
-<p>知道得多一点，又会遇到新的不明白。</p>
-<p>比如，确定做图文以后，才发现自己不知道怎样组织图片和文字。就继续广泛了解相关问题，再围绕第一批内容，追问哪些做法适合当前的时间和条件。</p>
-<p>按照“先摸清相关问题，再围绕目标追问”的方式继续循环。每一轮都用新得到的信息，帮助下一轮提问更具体。</p>
+
 </section>
 <section class="course-reading-section course-reference-step" id="research-topic-1-narrowing" data-lesson-nav="4. 通过问题去收敛" data-lesson-search="通过问题去收敛">
 <h3 tabindex="-1">第四步：通过问题去收敛</h3>
-<p>当已有的信息足以帮助你决定眼前怎样尝试，就把问题收回来，整理当前最需要回答的部分。</p>
-<p>结合前面确定的条件，这次暂时用不到的方向可以先放在一边，相近的问题可以合并。最初的“我该怎么开始”，就可能收成这样一个问题：</p>
-<p>“我怎样在接下来两周内，参考五个相关账号，用已有手机完成前六篇日常办公技巧图文？”</p>
-<p>这个问题说清了时间、参考对象和准备完成的内容。接下来缺什么信息，也就更容易继续追问。</p>
+
 </section>
 </div>
 </template>
 <template id="research-reading-body">
-<div class="course-reading">
+<div class="course-reading course-outline">
 <aside class="course-reading-example"><p>你想弄明白怎样为一个项目安排后端，找来了一批教程、技术文章和其他材料。链接越来越多，标题看起来都有关，却还不知道每篇讲了什么、哪些应该先读。</p>
 <p>先把这次的核心需求写清楚：通过阅读这批材料，理解自己项目需要的后端内容，以及这些内容怎样配合。再把链接交给 AI，按照下面的阅读流程处理。</p></aside>
-<p class="course-reading-context">执行参考顺序：逐个获取总结 → 给出综述 → 深入阅读。</p>
 <section class="course-reading-section course-reference-step" id="research-topic-2-summary" data-lesson-nav="1. 逐个获取总结" data-lesson-search="逐个获取总结">
 <h3 tabindex="-1">第一步：逐个获取总结</h3>
-<p>先让 AI 逐篇读取材料，分别给出两到三句话的核心内容，并标注它属于教程、论文、工具介绍还是观点文章。</p>
-<p>这样，你能先分清手里有哪些材料，每一篇大致在回答什么问题。如果某个链接无法访问，也要明确列出来，方便补充正文或更换材料。</p>
+
 </section>
 <section class="course-reading-section course-reference-step" id="research-topic-2-overview" data-lesson-nav="2. 给出综述" data-lesson-search="给出综述">
 <h3 tabindex="-1">第二步：给出综述</h3>
-<p>等这一批材料分别处理完，再把它们放到一起看。</p>
-<p>让 AI 说明这批内容覆盖了哪些主题，哪些与自己的核心需求关系最直接，哪些是需要重点阅读的内容，以及建议按什么顺序继续读。</p>
-<p>在这个例子里，可以据此看清，哪些文章在讲怎样保存信息，哪些在讲怎样处理请求，哪些在讲运行和部署。再围绕自己的项目问题，确定接下来重点阅读哪些部分。</p>
+
 </section>
 <section class="course-reading-section course-reference-step" id="research-topic-2-reading" data-lesson-nav="3. 深入阅读" data-lesson-search="深入阅读">
 <h3 tabindex="-1">第三步：深入阅读</h3>
-<p>按照前面确定的顺序，进入具体章节继续读，提取关键方法、实验结果，并记录核心用法。</p>
-<p>读教程时，把与自己项目有关的操作和做法弄清楚；读论文时，继续看方法怎样开展、实验说明了什么。遇到不明白的段落，就把具体问题拿出来继续追问。</p>
-<p>读完一部分，再回到最初的核心需求：这些内容回答了什么，哪些地方仍然没有说明白？这样，阅读得到的内容就能接到自己要研究的问题上。</p>
+
 </section>
 <section class="course-reading-section" id="research-topic-2-workshop" data-lesson-nav="小工作坊：复制阅读模板" data-lesson-search="阅读模板与核心需求">
 <h3 tabindex="-1">小工作坊：用自己的材料试一遍</h3>
-<p>找几篇围绕同一个问题的材料，填入链接和核心需求，再使用下面的模板。核心需求可以写成你现在想弄清楚的一件具体事情。</p>
 <div class="course-code"><div class="course-code-bar"><span>阅读模板 · 填入链接和核心需求</span><button class="btn quiet sm" type="button" data-copy="workshop-code" aria-label="复制阅读模板">复制</button></div><pre class="course-code-body" id="workshop-code"><span class="ln">## 阅读论文/博客的标准流程</span>
 <span class="ln">我需要你帮我阅读以下技术博客，请按以下步骤执行：</span>
 <span class="ln"></span>
@@ -616,41 +539,29 @@
 </div>
 </template>
 <template id="agent-course-body">
-<div class="course-reading">
+<div class="course-reading course-outline">
 <aside class="course-reading-example"><p>你准备办生日会，需要一个能在规定时间送到的蛋糕。找店铺、确认能否接单、订购和安排配送，都是这件事中要处理的内容。</p>
 <p>这里先假设，存在一个能够使用相关工具、实际推进订购的助手。用它怎样办事，来理解下面四个条目。</p></aside>
-<p class="course-reading-context">执行参考顺序：agent 和普通 AI 有什么不一样 → agent 是怎么干活的 → 为什么要给 agent 定规矩 → agent 不是越多越好。</p>
 <section class="course-reading-section course-reference-step" id="development-topic-3-lesson-1" data-lesson-nav="1. agent 和普通 AI 有什么不一样" data-lesson-search="agent 和普通 AI 有什么不一样">
 <h3 tabindex="-1">第一项：agent 和普通 AI 有什么不一样</h3>
-<p>先比较在这件事里，两种助手各能帮你做什么。</p>
-<p>假设一个助手只能给建议，它会提醒你准备蛋糕、告诉你怎样找店铺，后面的事情还要你去操作。另一个助手能够使用查询、订购和配送相关的工具，就有可能继续帮你把订蛋糕这件事往前做。</p>
-<p>这个例子用“给建议”和“实际推进任务”的区别，帮助理解 agent 在这里承担的作用。</p>
 <figure class="wardrobe-figures" data-count="1">
 <img src="assets/agent/agent1.svg" width="640" height="300" alt="左边普通 AI 只告诉你怎么在外卖 App 下单；右边 agent 回复蛋糕订好了，明天下午 3 点送到。" loading="lazy" decoding="async">
 </figure>
 </section>
 <section class="course-reading-section course-reference-step" id="development-topic-3-lesson-2" data-lesson-nav="2. agent 是怎么干活的" data-lesson-search="agent 是怎么干活的">
 <h3 tabindex="-1">第二项：agent 是怎么干活的</h3>
-<p>助手先决定眼前要做什么，实际去做，看看结果，再决定下一步。</p>
-<p>例如，先查询一家蛋糕店。发现关门了，就依据这个结果换一家；找到能接单的店，再继续确认能否满足生日会的需要。</p>
-<p>“判断—行动—看结果—再判断”会重复发生。最终还要确认是否订成、能否按需要送到，并把结果告诉你。</p>
 <figure class="wardrobe-figures" data-count="1">
 <img src="assets/agent/agent2.svg" width="640" height="300" alt="想、做、看结果绕成一个圈。订蛋糕时 A 店关门了，它就换 B 店，下单成功。" loading="lazy" decoding="async">
 </figure>
 </section>
 <section class="course-reading-section course-reference-step" id="development-topic-3-lesson-3" data-lesson-nav="3. 为什么要给 agent 定规矩" data-lesson-search="为什么要给 agent 定规矩">
 <h3 tabindex="-1">第三项：为什么要给 agent 定规矩</h3>
-<p>实际做事会碰到花钱和失败的情况，所以需要把边界讲清楚。</p>
-<p>比如，最多能花多少钱；连续几家店都订不到时，要及时回来说明情况。助手就知道什么情况下可以继续，什么情况下需要停下来和你一起决定。</p>
-<p>这些规则约束前面讲到的整个办事过程，帮助它围绕你的需要推进。</p>
 <figure class="wardrobe-figures" data-count="1">
 <img src="assets/agent/agent3.svg" width="640" height="300" alt="两条规矩：预算 200 元，680 元的蛋糕不能付；连着几家店都订不到，就回来问你。" loading="lazy" decoding="async">
 </figure>
 </section>
 <section class="course-reading-section course-reference-step" id="development-topic-3-lesson-4" data-lesson-nav="4. agent 不是越多越好" data-lesson-search="agent 不是越多越好">
 <h3 tabindex="-1">第四项：agent 不是越多越好</h3>
-<p>如果增加其他助手，就需要交流各自在做什么，也可能重复处理同一件事。</p>
-<p>假如两位助手都以为自己负责订蛋糕，就可能订出两份，带来额外花费。是否需要更多助手，要结合这件事和分工来判断，同时把各自的职责讲清楚。</p>
 <figure class="wardrobe-figures" data-count="1">
 <img src="assets/agent/agent4.svg" width="640" height="300" alt="1 个 agent 订了 1 个蛋糕；3 个 agent 互相传话，结果订重了，钱花得更多。" loading="lazy" decoding="async">
 </figure>
