@@ -33,3 +33,17 @@
 .wardrobe-ending{margin:var(--space-8) 0 var(--space-16);font-family:var(--text-quote-font);font-size:var(--text-quote-size);line-height:var(--text-quote-leading);font-weight:var(--text-quote-weight)}
 .course-page .anchor-nav .lesson-sub-link{padding-left:var(--space-3);border-left:1px solid var(--semantic-line);font-size:var(--text-caption-size);line-height:var(--text-caption-leading)}
 @media(max-width:767px){.wardrobe-figures,.wardrobe-figures[data-count="3"]{grid-template-columns:1fr}.wardrobe-figures img{max-height:280px}.wardrobe-figures[data-count="1"] img{max-height:320px}}
+
+/* Two approved main steps, with numbered actions and the existing illustrations. */
+.wardrobe-steps .wardrobe-example{margin:var(--space-6) 0;padding:var(--space-4);background:var(--semantic-subtle);border-radius:var(--radius-card);font:var(--text-caption-weight) var(--text-caption-size)/var(--text-caption-leading) var(--text-caption-font);color:var(--semantic-muted)}
+.wardrobe-steps .wardrobe-example p{margin:0}
+.wardrobe-steps .wardrobe-step-map{display:grid;gap:var(--space-3);margin:var(--space-8) 0;padding:var(--space-4) 0}
+.wardrobe-steps .wardrobe-entry{margin-top:var(--space-8)}
+.wardrobe-steps :is(.wardrobe-chapter,.wardrobe-entry,.wardrobe-example){scroll-margin-top:var(--space-4)}
+.wardrobe-steps .wardrobe-entry>p{margin:0}
+.wardrobe-steps .wardrobe-figures{margin:var(--space-6) 0;gap:var(--space-3)}
+.wardrobe-steps .wardrobe-figures>a{display:block;min-width:0;border-radius:var(--radius-image)}
+.wardrobe-steps .wardrobe-figures img{display:block}
+.wardrobe-steps .wardrobe-figures figcaption{grid-column:1/-1;margin:0;font:var(--text-caption-weight) var(--text-caption-size)/var(--text-caption-leading) var(--text-caption-font);color:var(--semantic-muted)}
+.course-page .anchor-nav .lesson-step-link{padding-left:var(--space-6)}
+@media(max-width:767px){.wardrobe-steps .wardrobe-figures[data-count="2"],.wardrobe-steps .wardrobe-figures[data-count="4"]{grid-template-columns:repeat(2,minmax(0,1fr))}.wardrobe-steps .wardrobe-figures[data-count="3"]{grid-template-columns:repeat(3,minmax(0,1fr))}.wardrobe-steps .wardrobe-figures.wardrobe-wide-pair{grid-template-columns:1fr}}
