@@ -1,0 +1,248 @@
+/* 05 结尾：字体与纸面只作用于这面便签墙。 */
+@font-face {
+  font-family: "Ending 鸿雷小纸条青春体";
+  src: url("assets/fonts/ending-qingchun.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.ending-page .lesson-layout {
+  grid-template-columns: 220px minmax(0, 1fr);
+}
+
+.ending-page .lesson-toc,
+.ending-page .breadcrumb,
+.ending-page .lesson-meta,
+.ending-page .lesson-tools,
+.ending-page [data-open-dialog="page-directory"] {
+  display: none;
+}
+
+.ending-page .lesson-main > h1 {
+  margin-bottom: 32px;
+}
+
+.ending-wall {
+  --paper-cream: color-mix(in srgb, var(--color-paper) 94%, var(--color-milk-coffee));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  /* Equal outer rows put the fifth paper at the actual center of the board. */
+  grid-template-rows: 1fr auto 1fr;
+  gap: 24px;
+  position: relative;
+  isolation: isolate;
+  padding: 40px 32px;
+  border: 10px solid var(--color-milk-coffee);
+  border-radius: 2px;
+  background: var(--color-milk-coffee) url("assets/ending/corkboard.png") center / cover;
+  box-shadow: inset 0 0 0 2px #fff5, inset 0 3px 16px #60442840, 0 8px 24px #2a3a4a18;
+}
+
+.ending-note {
+  --note-rotation: 0deg;
+  --paper-line: 28.8px;
+  position: relative;
+  align-self: start;
+  min-width: 0;
+  width: 80%;
+  transform: rotate(var(--note-rotation));
+  filter: drop-shadow(2px 6px 3px #38231338);
+  font-family: "Ending 鸿雷小纸条青春体", var(--font-quote);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-leading);
+  font-weight: var(--text-body-weight);
+  color: var(--semantic-text);
+  scroll-margin-top: 120px;
+}
+
+.ending-note::before {
+  content: "";
+  position: absolute;
+  inset: 8px -5px -6px 4px;
+  transform: rotate(2deg);
+  background-color: var(--paper-cream);
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0 10px, #bb46494d 10px 18px),
+    repeating-linear-gradient(90deg, transparent 0 10px, #bb46494d 10px 18px);
+}
+
+.ending-paper {
+  position: relative;
+  padding: 48px 24px 24px 32px;
+  background-color: var(--paper-cream);
+  background-image:
+    linear-gradient(90deg, transparent 0 18px, #cf78744d 18px 19px, transparent 19px),
+    repeating-linear-gradient(180deg, transparent 0 calc(var(--paper-line) - 1px), #929c9d38 calc(var(--paper-line) - 1px) var(--paper-line));
+  clip-path: polygon(0 0, 100% 0, 100% 98.6%, 97% 99.5%, 94% 98.8%, 91% 100%, 87% 99.2%, 83% 99.9%, 78% 98.9%, 74% 99.7%, 69% 99%, 63% 100%, 59% 99%, 54% 99.8%, 49% 98.8%, 44% 99.8%, 39% 98.9%, 34% 99.8%, 29% 99%, 24% 100%, 19% 99%, 14% 99.8%, 9% 98.8%, 4% 99.9%, 0 98.5%);
+}
+
+.ending-page .rich .ending-paper p {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.ending-page .rich .ending-paper .ending-question {
+  margin-bottom: 8px;
+}
+
+.ending-pin {
+  position: absolute;
+  z-index: 1;
+  top: -29px;
+  left: calc(50% - 28px);
+  width: 56px;
+  height: 72px;
+  overflow: visible;
+  transform: rotate(-20deg);
+  pointer-events: none;
+}
+
+.ending-note-1 {
+  --note-rotation: -2deg;
+  grid-area: 1 / 1;
+}
+
+.ending-note-2 {
+  --note-rotation: 1.5deg;
+  grid-area: 1 / 2;
+  justify-self: end;
+  width: 98%;
+}
+
+.ending-note-3 {
+  --note-rotation: 2deg;
+  grid-area: 3 / 1;
+  align-self: end;
+}
+
+.ending-note-4 {
+  --note-rotation: -2deg;
+  grid-area: 3 / 2;
+  align-self: end;
+  justify-self: end;
+  width: 74%;
+}
+
+.ending-note-5 {
+  grid-area: 2 / 1 / 3 / -1;
+  justify-self: center;
+  width: 56%;
+  z-index: 2;
+}
+
+.ending-note-3,
+.ending-note-4,
+.ending-note-5 {
+  --paper-line: 38.4px;
+  font-size: var(--text-quote-size);
+  line-height: var(--text-quote-leading);
+}
+
+.ending-note-5 .ending-paper {
+  padding: 48px 32px 32px;
+  background-color: var(--color-paper);
+}
+
+.ending-note-5::before {
+  inset: 5px -5px -5px 4px;
+  transform: rotate(-1.5deg);
+}
+
+.ending-note-5 strong {
+  font-weight: 700;
+}
+
+.ending-note-5 p {
+  text-wrap: balance;
+  text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .ending-page .lesson-layout {
+    display: block;
+    padding: 24px 16px;
+  }
+
+  .ending-page .lesson-side {
+    display: none;
+  }
+
+  .ending-page .lesson-mobile-bar {
+    display: flex;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--semantic-surface);
+    border-bottom: 1px solid var(--semantic-line);
+  }
+
+  .ending-wall {
+    gap: 24px 16px;
+    padding: 32px 24px;
+    border-width: 8px;
+  }
+
+  .ending-note-1,
+  .ending-note-2,
+  .ending-note-3,
+  .ending-note-4 {
+    width: 96%;
+  }
+
+  .ending-note-5 {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ending-wall {
+    gap: 24px 12px;
+    padding: 32px 12px;
+    border-width: 6px;
+  }
+
+  .ending-note-1,
+  .ending-note-2,
+  .ending-note-3,
+  .ending-note-4,
+  .ending-note-5 {
+    width: 100%;
+  }
+
+  .ending-note-1,
+  .ending-note-2,
+  .ending-note-3,
+  .ending-note-4 {
+    --paper-line: 28.8px;
+    --note-rotation: 0deg;
+    font-size: var(--text-body-size);
+    line-height: var(--text-body-leading);
+  }
+
+  .ending-paper {
+    padding: 40px 12px 16px 18px;
+    background-image:
+      linear-gradient(90deg, transparent 0 8px, #cf78744d 8px 9px, transparent 9px),
+      repeating-linear-gradient(180deg, transparent 0 calc(var(--paper-line) - 1px), #929c9d38 calc(var(--paper-line) - 1px) var(--paper-line));
+  }
+
+  .ending-note-5 .ending-paper {
+    padding: 40px 20px 24px;
+  }
+
+  .ending-pin {
+    top: -25px;
+    left: calc(50% - 24px);
+    width: 48px;
+    height: 62px;
+  }
+}
+
+@media print {
+  .ending-wall {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    break-inside: avoid;
+  }
+}
